@@ -6,7 +6,6 @@ Este proyecto esta dirigido al rediseño de las interfaces y de ciertos modulos 
 
 - Laravel 8
 - SQL server
-- Vue
 - Boostrap
 - HTML
 - PHP
