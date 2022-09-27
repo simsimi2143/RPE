@@ -36,3 +36,6 @@ Instalamos laravel 8 para windows o linux segun corresponda siguiendo las intruc
 ```
 https://github.com/devfy-space/laravel-desde-cero
 ```
+<br>
+
+### Visualización plataforma portal estudiante
