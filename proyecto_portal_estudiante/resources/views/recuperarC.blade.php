@@ -1,40 +1,170 @@
 <!DOCTYPE html>
-<html lang="es-cl">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
-        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
-        <script src="../js/sweetalert2.all.min.js"></script>
-
-        <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- Bootstrap -->
+        <title>Recuperar Contraseña</title>
+        <link rel="icon" href="{{ asset('uct.jpg') }}">
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="../js/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         <style>
-            body {
-                background-image: url("{{ asset('1077409.png') }} ");
-                background-repeat: no-repeat;
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+            
+            *, body {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                -moz-osx-font-smoothing: grayscale;
             }
 
-            h3{
-                font-family: 'Noto Sans SC', sans-serif;
-                font-weight: bold;
-                color: white;
+            html, body {
+                height: 100%;
+                background-image: url("{{ asset('1077409.png') }} ");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover; 
+                overflow: hidden;
             }
-        
+
+
+            .form-holder {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+            }
+
+            .form-holder .form-content {
+                position: relative;
+                text-align: center;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-items: center;
+                align-items: center;
+                padding: 60px;
+            }
+
+            .form-content .form-items {
+                border: 3px solid #fff;
+                padding: 40px;
+                display: inline-block;
+                width: 100%;
+                min-width: 540px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                text-align: left;
+                -webkit-transition: all 0.4s ease;
+                transition: all 0.4s ease;
+            }
+
+            .form-content h3 {
+                color: #fff;
+                text-align: left;
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            .form-content h3.form-title {
+                margin-bottom: 30px;
+            }
+
+            .form-content p {
+                color: #fff;
+                text-align: left;
+                font-size: 17px;
+                font-weight: 300;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+
+
+            .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+                color: #fff;
+            }
+
+            .form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
+                width: 100%;
+                padding: 9px 20px;
+                text-align: left;
+                border: 0;
+                outline: 0;
+                border-radius: 6px;
+                background-color: #fff;
+                font-size: 15px;
+                font-weight: 300;
+                color: #8D8D8D;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                margin-top: 16px;
+            }
+
+            .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+                background-color: #495056;
+                outline: none !important;
+                border: none !important;
+                box-shadow: none;
+            }
+
+            .form-content textarea {
+                position: static !important;
+                width: 100%;
+                padding: 8px 20px;
+                border-radius: 6px;
+                text-align: left;
+                background-color: #fff;
+                border: 0;
+                font-size: 15px;
+                font-weight: 300;
+                color: #8D8D8D;
+                outline: none;
+                resize: none;
+                height: 120px;
+                -webkit-transition: none;
+                transition: none;
+                margin-bottom: 14px;
+            }
+
+            .form-content textarea:hover, .form-content textarea:focus {
+                border: 0;
+                background-color: #ebeff8;
+                color: #8D8D8D;
+            }
+
+            .mv-up{
+                margin-top: -9px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .invalid-feedback{
+                color: #ff606e;
+            }
+
+            .valid-feedback{
+            color: #2acc80;
+            }
         </style>
     </head>
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="https://www.uct.cl/">
-                    <img src="iconoUCT.png" alt="UCT" width="30" height="30">
+                <a class="navbar-brand" href="#">
+                    <img src="uct.jpg" alt="UCT" width="30" height="30">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,13 +184,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://secretariageneral.uct.cl/"><i class="fa-solid fa-lock"></i> INTRANET</a>
-                        </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
                         </li>
 
                         <li class="nav-item">
@@ -91,107 +217,33 @@
                 </div>
             </div>
         </nav>
-
-
         
         <section>
-            <h3 class="text-center">Iniciar sesión</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="form-floating col-lg-2">
-                        <input type="number" class="form-control input-sm" id="floatingInput" placeholder="N°RUN">
-                        <label for="floatingInput">Run sin puntos ni guión</label>
-                    </div>
-                    
-                    <div class="form-floating col-lg-2">
-                        <input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Contraseña">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
+            <article class="row">
+                <div class="form-holder">
+                    <div class="form-content">
+                        <div class="form-items">
+                            <h3>Recuperar Contraseña</h3>
+                            <form class="requires-validation" novalidate>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="name" placeholder="RUT: 217452731" required>
+                                    <div class="valid-feedback">Ingresado Correctamente</div>
+                                    <div class="invalid-feedback">Ingrese su RUT</div>
+                                </div>
+                  
 
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a> 
-                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3">Recuperar contraseña</a>
-                        <a href="cambiar" type="submit" class="btn btn-secondary mb-3">Cambiar contraseña</a>
-                    </div>
-                </form>
-            </article>
-
-            <aside> <!-- Apartado para la publicidad de la Universidad-->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-  
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="31.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Juan Pablo II</h5>
-                                <p>Vista a la entrada del edificio cincuentenario.</p>
-                            </div>
-                        </div>
-    
-                        <div class="carousel-item">
-                            <img src="4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Francisco</h5>
-                                <p>Vista a la entrada principal del campus.</p>
-                            </div>                           
-                        </div>
-    
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-23.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-25.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/">
-                                <img src="banners.png" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="slider-felipe.jpg" class="d-block w-100" alt="...">                         
+                                <div class="form-button mt-3">
+                                    <button id="submit" type="submit" class="btn btn-primary">Enviar Contraseña</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-  
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-  
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
                 </div>
-            </aside>
+            </article>
         </section>
 
 
 
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
-        
         <!-- Pie de página -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
@@ -320,5 +372,6 @@
             <!-- Copyright -->
         </footer>
 
+    
     </body>
 </html>

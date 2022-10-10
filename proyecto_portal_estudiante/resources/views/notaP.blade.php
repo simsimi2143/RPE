@@ -1,39 +1,65 @@
 <!DOCTYPE html>
-<html lang="es-cl">
+<html lang = "{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
-        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
-        <script src="../js/sweetalert2.all.min.js"></script>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <title>Bienvenido</title>
+        <link href = "{{ asset('css/app.css') }}" rel = "stylesheet" type = "text/css"/>
+        <link rel = "icon" href = "{{ asset('images/icon_uct.png') }}">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
-        <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        
         <style>
+            
             body {
-                background-image: url("{{ asset('1077409.png') }} ");
+                background-image: url("{{ asset('images/1077409.png') }} ");
+                background-attachment: fixed;
                 background-repeat: no-repeat;
+                background-size: cover;
             }
 
-            h3{
-                font-family: 'Noto Sans SC', sans-serif;
-                font-weight: bold;
-                color: white;
+            .navbar {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                padding-top: 12px;
+                padding-bottom: 12px;
             }
-        
+
+            .navbar2 {
+                position: -webkit-sticky;
+                position: sticky;
+                display: block;
+                top: 0;
+                width: 28px;
+                height: 28px;
+                margin-left: 10px;
+                
+            }
+
+            .nav-r{
+                position: sticky;
+                float: right;
+                text-align: right;
+            }
+
+            .nav-r2{
+                float: right;
+                text-align: right;
+                position: sticky;
+                margin-left: 10px;
+            }
+
         </style>
+
     </head>
 
+<!--Barra de Navegación-->
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="https://www.uct.cl/">
+                <a class="navbar-brand" href="#">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
                 </a>
                 
@@ -54,13 +80,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://secretariageneral.uct.cl/"><i class="fa-solid fa-lock"></i> INTRANET</a>
-                        </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
                         </li>
 
                         <li class="nav-item">
@@ -91,109 +113,63 @@
                 </div>
             </div>
         </nav>
-
-
         
-        <section>
-            <h3 class="text-center">Iniciar sesión</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="form-floating col-lg-2">
-                        <input type="number" class="form-control input-sm" id="floatingInput" placeholder="N°RUN">
-                        <label for="floatingInput">Run sin puntos ni guión</label>
-                    </div>
-                    
-                    <div class="form-floating col-lg-2">
-                        <input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Contraseña">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
+<!--Contenido-->
 
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a> 
-                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3">Recuperar contraseña</a>
-                        <a href="cambiar" type="submit" class="btn btn-secondary mb-3">Cambiar contraseña</a>
-                    </div>
-                </form>
-            </article>
+    <div class = "text-black m-5 justify-content-end">
+        <h2>Solicitar Nota Pendiente</h2><br>
+        <a>
+            La <b>"Nota P"</b> es la calificación utilizada en una determinada asignatura cuando no ha sido posible cumplir con la evaluación final del curso dentro de los plazos establecidos en el Calendario Académico.<br><br>
+            Esta misma sólo podrá ser solicitada si se ha cumplido con al menos el 60% de las actividades y evaluaciones del curso.<br><br>
+            Es responsabilidad de el o la estudiante que ha solicitado la <b>“Nota P”</b> completar la o las evaluaciones no rendidas, lo que permitirá reemplazar la <b>“Nota P”</b> por la calificación correspondiente. <br><br>Si el o la estudiante no cumple dichas exigencias será calificado con nota uno <b>(1,0)</b>.
+            El plazo máximo para mantener una <b>“Nota P”</b> será de un año.
+            Para mayor información puedes solicitar el reglamento de <b>Nota P</b> del alumno de pregrado a <b>dara@uct.cl</b> o bien descargarlo del sitio web: <a href = "https://dara.uct.cl">https://dara.uct.cl</a>
+        </a>
+    </div>
 
-            <aside> <!-- Apartado para la publicidad de la Universidad-->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-  
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="31.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Juan Pablo II</h5>
-                                <p>Vista a la entrada del edificio cincuentenario.</p>
-                            </div>
-                        </div>
-    
-                        <div class="carousel-item">
-                            <img src="4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Francisco</h5>
-                                <p>Vista a la entrada principal del campus.</p>
-                            </div>                           
-                        </div>
-    
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-23.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-25.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/">
-                                <img src="banners.png" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="slider-felipe.jpg" class="d-block w-100" alt="...">                         
-                        </div>
-                    </div>
-  
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-  
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+    <div class = "ml-5 mr-5 rounded text-center">
+        <p class = "mt-4">
+            <a class = "btn btn-light pt-3 pb-3 border-dark" style = "box-shadow: none; width: 70%;" data-bs-toggle = "collapse" href = "#collapseExample" role = "button" aria-expanded = "false" aria-controls = "collapseExample">
+                Consulta Acerca de los Resultados
+            </a>
+        </p>
+        <div class = "collapse text-center" id = "collapseExample" style = "">
+            <div class = "card card-body border-dark text-center" style = "background-color: white;">
+            <table class = "table border-dark">
+                <thead class = "table-dark border-dark">
+                    <tr>
+                    <th scope="col">Rut</th>
+                    <th scope="col">Nombre</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>20329801-4</td>
+                    <td>Erioldo Mapitulo</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+                <div class = "text-center">
+                <select class = "form-select text-center w-55 p-1" aria-label = "Default select example">
+                    <option selected>Seleccione su carrera</option>
+                    <option value = "1">Primera Carrera</option>
+                    <option value = "2">Segunda Carrera</option>
+                    <option value = "3">Tercera Carrera</option>
+                </select>
                 </div>
-            </aside>
-        </section>
+
+            </div>
+        </div>
+    </div>
 
 
-
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
-        
-        <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+ <!-- footer -->
+            
+        <footer class="bg-dark text-muted mt-4">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
                     <div class="row">       
@@ -318,7 +294,8 @@
                 Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
             </div>
             <!-- Copyright -->
-        </footer>
-
-    </body>
+    </footer>
+   
+    <script src = "{{ asset('js/app.js') }}" type = "text/js"></script>
+</body>
 </html>

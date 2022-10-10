@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="es-cl">
+<html lang = "{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Universidad Católica de Temuco</title>
         <link rel="icon" href="{{ asset('iconoUCT.png') }}">
-        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
         <script src="../js/sweetalert2.all.min.js"></script>
 
         <!-- Los iconos tipo Solid de Fontawesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         
         <style>
+            
             body {
-                background-image: url("{{ asset('1077409.png') }} ");
+                background-image: url("{{ asset('images/1077409.png') }} ");
+                background-attachment: fixed;
                 background-repeat: no-repeat;
+                background-size: cover;
             }
 
-            h3{
-                font-family: 'Noto Sans SC', sans-serif;
-                font-weight: bold;
-                color: white;
-            }
-        
         </style>
+
     </head>
 
+    <!--Barra de Navegación-->
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="https://www.uct.cl/">
+                <a class="navbar-brand" href="#">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
                 </a>
                 
@@ -54,13 +52,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://secretariageneral.uct.cl/"><i class="fa-solid fa-lock"></i> INTRANET</a>
-                        </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
                         </li>
 
                         <li class="nav-item">
@@ -91,109 +85,34 @@
                 </div>
             </div>
         </nav>
-
-
         
-        <section>
-            <h3 class="text-center">Iniciar sesión</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="form-floating col-lg-2">
-                        <input type="number" class="form-control input-sm" id="floatingInput" placeholder="N°RUN">
-                        <label for="floatingInput">Run sin puntos ni guión</label>
-                    </div>
-                    
-                    <div class="form-floating col-lg-2">
-                        <input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Contraseña">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
-
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a> 
-                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3">Recuperar contraseña</a>
-                        <a href="cambiar" type="submit" class="btn btn-secondary mb-3">Cambiar contraseña</a>
-                    </div>
-                </form>
-            </article>
-
-            <aside> <!-- Apartado para la publicidad de la Universidad-->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-  
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="31.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Juan Pablo II</h5>
-                                <p>Vista a la entrada del edificio cincuentenario.</p>
-                            </div>
-                        </div>
+    <!--Collapse Contenido-->
+        <div class = "nav flex-column text-black mt-5 pb-4 justify-content-end" id="accordionExample" style = "background-color: #; width: 100%; text-align: center;">
+            <h4>¿Que acción deseas realizar?</h4>
+            <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
+                <h2 href = "nota_p" class = "accordion-header" id="headingOne">
+                    <a href = "nota_p" class = "btn btn-primary">Solicitud Nota P</a>
+                </h2>
+                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
+                <h2 href = "hora_a" class = "accordion-header" id="headingOne">
+                    <a href = "hora_a" class = "btn btn-primary">Hora Asistente Social</a>
+                </h2>
+                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
+                <h2 href = "certificado_a" class = "accordion-header" id="headingOne">
+                    <a href = "certificado_a" class = "btn btn-primary">Certificados Académicos</a>
+                </h2>
+                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
+                <h2 href = "info_p" class = "accordion-header" id="headingOne">
+                    <a href = "info_p" class = "btn btn-primary">Información Personal</a>
+                </h2>
+            </div>
+            </div>
+            </div>
+        </div>
+     
+ <!-- footer --> 
     
-                        <div class="carousel-item">
-                            <img src="4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Francisco</h5>
-                                <p>Vista a la entrada principal del campus.</p>
-                            </div>                           
-                        </div>
-    
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-23.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-25.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/">
-                                <img src="banners.png" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src="slider-felipe.jpg" class="d-block w-100" alt="...">                         
-                        </div>
-                    </div>
-  
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-  
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-            </aside>
-        </section>
-
-
-
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
-        
-        <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+    <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
                     <div class="row">       
@@ -318,7 +237,8 @@
                 Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
             </div>
             <!-- Copyright -->
-        </footer>
+    </footer>
 
-    </body>
+        <script src = "{{ asset('js/app.js') }}" type = "text/js"></script>
+</body>
 </html>

@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html lang="es-cl">
+<html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
-        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Menu Principal</title>
+        <link rel="icon" href="{{ asset('uct.jpg') }}">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <script src="../js/sweetalert2.all.min.js"></script>
-
-        <!-- Los iconos tipo Solid de Fontawesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        
+        <!-- Styles -->
         <style>
             body {
                 background-image: url("{{ asset('1077409.png') }} ");
+                background-attachment: fixed;
                 background-repeat: no-repeat;
+                background-size: cover; 
             }
 
-            h3{
-                font-family: 'Noto Sans SC', sans-serif;
-                font-weight: bold;
-                color: white;
-            }
-        
         </style>
     </head>
-
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="https://www.uct.cl/">
-                    <img src="iconoUCT.png" alt="UCT" width="30" height="30">
+                <a class="navbar-brand" href="#">
+                    <img src="uct.jpg" alt="UCT" width="30" height="30">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,13 +49,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://secretariageneral.uct.cl/"><i class="fa-solid fa-lock"></i> INTRANET</a>
-                        </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
                         </li>
 
                         <li class="nav-item">
@@ -92,107 +83,151 @@
             </div>
         </nav>
 
+    <!-- -->
+    <h1 style = "text-align: center;">Bienvenido PABLO</h1>
 
-        
-        <section>
-            <h3 class="text-center">Iniciar sesión</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="form-floating col-lg-2">
-                        <input type="number" class="form-control input-sm" id="floatingInput" placeholder="N°RUN">
-                        <label for="floatingInput">Run sin puntos ni guión</label>
-                    </div>
-                    
-                    <div class="form-floating col-lg-2">
-                        <input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Contraseña">
-                        <label for="floatingPassword">Contraseña</label>
-                    </div>
+    <div class="text-center">
+        <img src="carp_colo2.png" width="300" height="300" class="img-thumbnail" alt="...">
+    </div>
 
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a> 
-                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3">Recuperar contraseña</a>
-                        <a href="cambiar" type="submit" class="btn btn-secondary mb-3">Cambiar contraseña</a>
-                    </div>
-                </form>
-            </article>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8 text-center">
+            <ul class="list-group">
+                <li class="list-group-item">Rut: 19.807.541-k</li>
+                <li class="list-group-item">Nombres: Pablo Javier </li>
+                <li class="list-group-item">Apellido paterno: Gomez</li>
+                <li class="list-group-item">Apellido materno: Quidel</li>
+                <li class="list-group-item">Fecha de Nacimiento: 03-03-2003</li>
+                <li class="list-group-item">Sexo: Masculino</li>
+                <li class="list-group-item">E-Mail UCTemuco: Pgomez2021@uct.cl</li>
+    </ul>
+            </div>
+        </div>
+    </div>
 
-            <aside> <!-- Apartado para la publicidad de la Universidad-->
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-  
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="31.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Juan Pablo II</h5>
-                                <p>Vista a la entrada del edificio cincuentenario.</p>
-                            </div>
-                        </div>
-    
-                        <div class="carousel-item">
-                            <img src="4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Campus San Francisco</h5>
-                                <p>Vista a la entrada principal del campus.</p>
-                            </div>                           
-                        </div>
-    
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-23.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
+    <div class="row row-cols-auto justify-content-around align-items-center">
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Solicitud Nota P</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
 
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/ciclo-charlas-de-futuro/">
-                                <img src="BANNER_CHARLAS-25.jpg" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Prestamo Biblioteca</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="prestamo_biblioteca" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
 
-                        <div class="carousel-item">
-                            <a href="https://pdi.uct.cl/">
-                                <img src="banners.png" class="d-block w-100" alt="...">
-                            </a>
-                        </div>
+        <div class="row row-cols-auto">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Informacion Academica</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
 
-                        <div class="carousel-item">
-                            <img src="slider-felipe.jpg" class="d-block w-100" alt="...">                         
-                        </div>
-                    </div>
-  
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-  
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+    </div>
+
+    <div class="row row-cols-auto justify-content-around align-items-center">
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Notas Parciales</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="Notas_Parciales" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Cuenta Corriente</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="Cuenta_Corriente" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="row row-cols-auto">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Horas con la Asistente social</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="row row-cols-auto justify-content-around align-items-center">
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Documentos</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Solicitudes Estudiantiles</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+        <div class="row row-cols-auto">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Observacione Ficha Academica</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="row row-cols-auto justify-content-around align-items-center">
+        <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Certificado Academico</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-auto">
+            <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">cerrar sesion</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">ir</a>
+            </div>
+        </div>
+    </div>
+
                 </div>
-            </aside>
-        </section>
-
-
-
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
-        
-        <!-- Pie de página -->
+            </div>
+        </div>
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
@@ -319,6 +354,6 @@
             </div>
             <!-- Copyright -->
         </footer>
-
+        
     </body>
 </html>
