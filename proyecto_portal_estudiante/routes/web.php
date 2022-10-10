@@ -35,3 +35,6 @@ Route::get('recuperar', function () {
 Route::get('cambiar', function () {
     return view('cambiar');
 });
+Route::get('cola', function () {
+    return view('cola');
+});
