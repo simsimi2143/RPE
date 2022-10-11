@@ -38,3 +38,6 @@ Route::get('cambiar', function () {
 Route::get('cola', function () {
     return view('cola');
 });
+Route::get('inscripcion', function () {
+    return view('inscripcion');
+});
