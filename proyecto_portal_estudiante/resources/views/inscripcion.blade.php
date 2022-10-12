@@ -145,13 +145,10 @@
         </div>
                 
         </div>
-    </div>
-    </div>
-    
-    <br>
-   
-    </div>
-    </div>
+        </div>
+        </div>
+        </div>
+        </div>
 </div>
 
 
@@ -212,7 +209,33 @@
     </div>
 </div>
 
-
-
-
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-success">Inscribir</button>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+    <div class="accordion accordion-flush col-6" id="accordionFlushExample">
+  <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Ramos inscritos
+            </button>
+            </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        
+        <h3 class="text-center">Ramos inscritos</h3>
+        <!-- Aquí se pondrian checkboxs para enviar formulario de ramos a inscribir-->
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-warning">Editar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <br>
+   
+    </div>
+    </div>
+</div>
 </body>

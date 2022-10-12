@@ -221,10 +221,7 @@
                                     <li>
                                         <i class="fa fa-phone mr-3"></i> +56 45 2 553 978
                                     </li>
-                                </ul>
-                            </p>
-                        </div>
-
+                                <footer
                         <div class="col-sm-3">
                             <p class="footer-widget text-black-50">
                                 <h4>CAMPUS MENCHACA LIRA</h4>
