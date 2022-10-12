@@ -33,8 +33,8 @@ Route::get('asistente', function () {
     return view('horasAsistente');
 });
 
-Route::get('documentos', function () {
-    return view('documentos');
+Route::get('certificado', function () {
+    return view('certificadoA');
 });
 
 Route::get('recuperar', function () {
@@ -43,4 +43,24 @@ Route::get('recuperar', function () {
 
 Route::get('cambiar', function () {
     return view('cambiarC');
+});
+
+Route::get('informacion', function () {
+    return view('informacionP');
+});
+
+Route::get('informacionacademica', function () {
+    return view('informacionA');
+});
+
+Route::get('documentos', function () {
+    return view('documentos');
+});
+
+Route::get('observacion', function () {
+    return view('obsFichaAcademica');
+});
+
+Route::get('solicitudes', function () {
+    return view('solicitudesEstudiantes');
 });

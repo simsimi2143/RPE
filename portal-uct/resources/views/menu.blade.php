@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-cl">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Menu Principal</title>
-        <link rel="icon" href="{{ asset('uct.jpg') }}">
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Universidad Católica de Temuco</title>
+        <link rel="icon" href="{{ asset('Logo_UCT.png') }}">
         <script src="../js/sweetalert2.all.min.js"></script>
+
+        <!-- Los iconos tipo Solid de Fontawesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        <!-- Styles -->
+        
+        <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("{{ asset('1077409.png') }} ");
+                background-image: url("Fondo.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
             }
 
         </style>
+
     </head>
+
     <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="uct.jpg" alt="UCT" width="30" height="30">
+                <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
+                    <img src="iconoUCT.png" alt="UCT" width="30" height="30">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,195 +40,162 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://educa.blackboard.com/"><i class="fa-solid fa-square-pen"></i> EDUCA BLACKBOARD</a>
+                            <a class="nav-link" href="https://educa.blackboard.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-pen"></i> EDUCA BLACKBOARD</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://webmail.uct.cl/"><i class="fa-solid fa-envelope"></i> WEBMAIL</a>
+                            <a class="nav-link" href="https://webmail.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i> WEBMAIL</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
+                            <a class="nav-link" href="https://directorio.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://secretariageneral.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-lock"></i> INTRANET</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://admision.uct.cl/"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
+                            <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://dge.uct.cl/"><i class="fa-solid fa-building-columns"></i> DGE</a>
+                            <a class="nav-link" href="https://dge.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i> DGE</a>
                         </li>
                         
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.uct.cl/calendario-academico/"><i class="fa-regular fa-calendar"></i> CALENDARIO</a>
+                            <a class="nav-link" href="https://www.uct.cl/calendario-academico/" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-calendar"></i> CALENDARIO</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.uct.cl/centro-de-ayuda/"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
+                            <a class="nav-link" href="https://www.uct.cl/centro-de-ayuda/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
                         </li>
                     </ul>
 
                     <div>
-                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-secondary mr-2"><i class="fab fa-facebook-f"></i> </a>
-                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-secondary"> <i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-secondary"> <i class="fab fa-instagram"></i> </a>
-                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-secondary"> <i class="fa-brands fa-youtube"></i> </a>
-                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-secondary"> <i class="fa-brands fa-flickr"></i></a>
+                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-secondary mr-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>
+                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-flickr"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
 
-    <!-- -->
-    <h1 style = "text-align: center;">Bienvenido PABLO</h1>
 
-    <div class="text-center">
-        <img src="carp_colo2.png" width="300" height="300" class="img-thumbnail" alt="...">
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8 text-center">
-            <ul class="list-group">
-                <li class="list-group-item">Rut: 19.807.541-k</li>
-                <li class="list-group-item">Nombres: Pablo Javier </li>
-                <li class="list-group-item">Apellido paterno: Gomez</li>
-                <li class="list-group-item">Apellido materno: Quidel</li>
-                <li class="list-group-item">Fecha de Nacimiento: 03-03-2003</li>
-                <li class="list-group-item">Sexo: Masculino</li>
-                <li class="list-group-item">E-Mail UCTemuco: Pgomez2021@uct.cl</li>
-    </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-cols-auto justify-content-around align-items-center">
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Solicitud Nota P</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Prestamo Biblioteca</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="prestamo_biblioteca" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Informacion Academica</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
-    <div class="row row-cols-auto justify-content-around align-items-center">
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Notas Parciales</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="Notas_Parciales" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Cuenta Corriente</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="Cuenta_Corriente" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Horas con la Asistente social</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <div class="row row-cols-auto justify-content-around align-items-center">
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Documentos</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Solicitudes Estudiantiles</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="row row-cols-auto">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Observacione Ficha Academica</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
-    <div class="row row-cols-auto justify-content-around align-items-center">
-        <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">Certificado Academico</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-cols-auto">
-            <div class="card" >
-            <div class="card-body">
-                <h5 class="card-title">cerrar sesion</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">ir</a>
-            </div>
-        </div>
-    </div>
-
+        <!-- Funciones generales -->
+        <section>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                         <h1 style = "text-align: center;">Bienvenido PABLO</h1>
+                         <div class="text-center">
+                            <img src="53133.png" width="300" height="300" class="img-thumbnail" alt="...">
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-8 text-center">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Rut: 19.807.541-k</li>
+                                        <li class="list-group-item">Nombres: Pablo Javier </li>
+                                        <li class="list-group-item">Apellido paterno: Gomez</li>
+                                        <li class="list-group-item">Apellido materno: Quidel</li>
+                                        <li class="list-group-item">Fecha de Nacimiento: 03-03-2003</li>
+                                        <li class="list-group-item">Sexo: Masculino</li>
+                                        <li class="list-group-item">E-Mail UCTemuco: Pgomez2021@uct.cl</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Opciones generales del portal del estudiante primera seccion -->
+                    <div class="col-md-3 order-md-first">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Solicitud Nota P</h5>
+                                <p class="card-text">solicitud para dejar Nota Pendiente.</p>
+                                <a href="notap" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cuenta Corriente</h5>
+                                <p class="card-text">Cta. Corriente, Beneficios, Credito complementari. Emision pagare..</p>
+                                <a href="cuenta" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Información Académica</h5>
+                                <p class="card-text">Historial academico y cursos inscritos</p>
+                                <a href="informacionacademica" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Documentos</h5>
+                                <p class="card-text">Certificado Estudiante Regular, Formularios, Formas de pago PAT.</p>
+                                <a href="documentos" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Certificado Academico</h5>
+                                <p class="card-text">Información sobre los certificados académicos.</p>
+                                <a href="certificado" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Opciones generales del portal del estudiante segunda seccion -->
+                    <div class="col-md-3 order-md-last">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Préstamos Biblioteca</h5>
+                                <p class="card-text">Consulta deuda Biblioteca.</p>
+                                <a href="biblioteca" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Horas Asistente social</h5>
+                                <p class="card-text">Reserva de horas para asistentes sociales.</p>
+                                <a href="asistente" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Notas Parciales</h5>
+                                <p class="card-text">Notas parciales y Asistencia.</p>
+                                <a href="notas" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Solicitudes Estudiantiles</h5>
+                                <p class="card-text">Renuncia, Suspensión y Reincoporporación.</p>
+                                <a href="solicitudes" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ob.Ficha Academica</h5>
+                                <p class="card-text">Observación y resultados ficha académica.</p>
+                                <a href="observacion" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <br>
+        </section>
+        <!-- Footer -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
@@ -354,6 +322,6 @@
             </div>
             <!-- Copyright -->
         </footer>
-        
+
     </body>
 </html>

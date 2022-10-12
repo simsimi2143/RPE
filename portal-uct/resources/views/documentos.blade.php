@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang = "{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="es-cl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
+        <link rel="icon" href="{{ asset('Logo_UCT.png') }}">
         <script src="../js/sweetalert2.all.min.js"></script>
 
         <!-- Los iconos tipo Solid de Fontawesome-->
@@ -14,24 +13,21 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         
+        <!-- Fondo del body de la paguina -->
         <style>
-            
             body {
-                background-image: url("{{ asset('images/1077409.png') }} ");
+                background-image: url("Fondo.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: cover; 
             }
-
         </style>
-
     </head>
 
-    <!--Barra de Navegación-->
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
                 </a>
                 
@@ -42,77 +38,90 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://educa.blackboard.com/"><i class="fa-solid fa-square-pen"></i> EDUCA BLACKBOARD</a>
+                            <a class="nav-link" href="https://educa.blackboard.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-pen"></i> EDUCA BLACKBOARD</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://webmail.uct.cl/"><i class="fa-solid fa-envelope"></i> WEBMAIL</a>
+                            <a class="nav-link" href="https://webmail.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i> WEBMAIL</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://directorio.uct.cl/"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
+                            <a class="nav-link" href="https://directorio.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i> DIRECTORIO</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://secretariageneral.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-lock"></i> INTRANET</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="https://vip.uct.cl/posgrado/"><i class="fa-solid fa-graduation-cap"></i> POSTGRADO</a>
+                            <a class="nav-link" href="https://vip.uct.cl/posgrado/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://admision.uct.cl/"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
+                            <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://dge.uct.cl/"><i class="fa-solid fa-building-columns"></i> DGE</a>
+                            <a class="nav-link" href="https://dge.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-building-columns"></i> DGE</a>
                         </li>
                         
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.uct.cl/calendario-academico/"><i class="fa-regular fa-calendar"></i> CALENDARIO</a>
+                            <a class="nav-link" href="https://www.uct.cl/calendario-academico/" target="_blank" rel="noopener noreferrer"><i class="fa-regular fa-calendar"></i> CALENDARIO</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.uct.cl/centro-de-ayuda/"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
+                            <a class="nav-link" href="https://www.uct.cl/centro-de-ayuda/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-address-book"></i> CONTACTO</a>
                         </li>
                     </ul>
 
                     <div>
-                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-secondary mr-2"><i class="fab fa-facebook-f"></i> </a>
-                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-secondary"> <i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-secondary"> <i class="fab fa-instagram"></i> </a>
-                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-secondary"> <i class="fa-brands fa-youtube"></i> </a>
-                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-secondary"> <i class="fa-brands fa-flickr"></i></a>
+                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-secondary mr-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>
+                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-flickr"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <!-- Funciones generales -->
+        <section>
+            <br>
+            <br>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Texto inicial de la paguina -->
+                        <h1 class="text-warning" style = "text-align: center;">Documentos</h1>
+                        <div class="card border-primary mb-3 text-center">
+                            <div class="card-body">
+                                <p class="card-body text-primary">
+                                    Estimados/as estudiantes, La Vicerrectoría Académica a través de la Dirección de Admisión y 
+                                    Registros Académicos en conjunto con la Dirección de Informática, tiene el agrado de comunicarles 
+                                    que contamos con un nuevo servicio de Firma Electrónica Avanzada, el cual permitirá brindarles 
+                                    una mejor atención y disminuir los tiempos de espera en lo que se requiere a solicitudes de certificados.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card border-danger mb-3">
+                            <div class="card-body text-danger">
+                                <p class="card-text">
+                                    * Para imprimir los documentos se recomienda abrir con Adobe Acrobat Reader.
+                                    * Debe habilitar la opción de ventanas emergentes de su navegador.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         
-    <!--Collapse Contenido-->
-        <div class = "nav flex-column text-black mt-5 pb-4 justify-content-end" id="accordionExample" style = "background-color: #; width: 100%; text-align: center;">
-            <h4>¿Que acción deseas realizar?</h4>
-            <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
-                <h2 href = "nota_p" class = "accordion-header" id="headingOne">
-                    <a href = "nota_p" class = "btn btn-primary">Solicitud Nota P</a>
-                </h2>
-                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
-                <h2 href = "hora_a" class = "accordion-header" id="headingOne">
-                    <a href = "hora_a" class = "btn btn-primary">Hora Asistente Social</a>
-                </h2>
-                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
-                <h2 href = "certificado_a" class = "accordion-header" id="headingOne">
-                    <a href = "certificado_a" class = "btn btn-primary">Certificados Académicos</a>
-                </h2>
-                <div class = "mt-4 ml-4 mr-4 b-0 mb-2">
-                <h2 href = "info_p" class = "accordion-header" id="headingOne">
-                    <a href = "info_p" class = "btn btn-primary">Información Personal</a>
-                </h2>
-            </div>
-            </div>
-            </div>
-        </div>
-     
- <!-- footer --> 
-    
-    <footer class="bg-dark text-muted">           
+        <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
                     <div class="row">       
@@ -237,8 +246,7 @@
                 Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
             </div>
             <!-- Copyright -->
-    </footer>
+        </footer>
 
-        <script src = "{{ asset('js/app.js') }}" type = "text/js"></script>
-</body>
+    </body>
 </html>
