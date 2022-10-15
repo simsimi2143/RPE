@@ -16,7 +16,7 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("Fondo.png");
+                background-image: url("{{ asset('1077409.png') }} ");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 

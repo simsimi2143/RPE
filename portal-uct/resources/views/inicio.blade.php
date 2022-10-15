@@ -24,9 +24,18 @@
             h3{
                 font-family: 'Noto Sans SC', sans-serif;
                 font-weight: bold;
-                color: white;
             }
-        
+
+            .run{
+                display: flex;
+            }
+
+            .guion{
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+                font-size: 150%;
+            }
+                 
         </style>
     </head>
 
@@ -64,6 +73,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="https://tuct.uctemuco.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i> CREDENCIAL</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
@@ -95,23 +108,30 @@
 
         
         <section>
-            <h3 class="text-center">Iniciar sesión</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="form-floating col-lg-2">
-                        <input class="form-control input-sm" id="floatingInput" onpaste="return false;" ondrop="return false;" inputmode="numeric" onkeypress='validate(event)' class="form-control form-control-lg" size=9 minlength="7" maxlength="9" type="text" pattern="[0-9]+" name="rut" id="rut" placeholder="N° RUN" oninput="checkRut()">
-                        <label for="floatingInput">Run sin puntos ni guión</label>
+            <h3 class="text-center text-white">Iniciar sesión</h3>
+            
+            <article class="container">
+                <form action="{{route('inicio')}}" method="POST" class="form-inline row justify-content-center g-3" name="frm1" onload="setValue()">
+                    <div class="form-floating col-lg-3 run">
+                        <input value="@if(Session::has('rut_nro')){{ Session::get('rut_nro')}}@endif" class="form-control input-sm" id="floatingInput" onpaste="return false;" ondrop="return false;" inputmode="numeric" onkeypress='validate(event)' class="form-control form-control-lg" size=8 minlength="7" maxlength="8" type="text" pattern="[0-9]+" name="rut" id="rut" placeholder="N° RUN" oninput="checkRut()">
+                        <label for="floatingInput">RUN</label>
+
+                        <div class="text-white text-center guion col-1">-</div>
+                            
+                        <div class="form-floating dv">
+                            <input value="@if(Session::has('dv_nro')){{ Session::get('dv_nro') }}@endif" onpaste="return false;" ondrop="return false;" class="form-control input-sm" size=2 minlength="1" maxlength="1" type="text" name="dv" id="dv" placeholder="dv" oninput="checkRut()" onkeyup="this.value = this.value.toUpperCase();" >
+                        </div>
                     </div>
                     
-                    <div class="form-floating col-lg-2">
-                        <input type="password" class="form-control input-sm" id="floatingPassword" placeholder="Contraseña">
+                    <div class="form-floating col-lg-3">
+                        <input value="@if(Session::has('contra')){{ Session::get('contra')}}@endif" type="password" class="form-control input-sm" id="floatingPassword" onpaste="return false;" ondrop="return false;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Contraseña" required>
                         <label for="floatingPassword">Contraseña</label>
                     </div>
 
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></a> 
-                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3" target="_blank" rel="noopener noreferrer">Recuperar contraseña</a>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success mb-3">Ingresar <i class="fa-solid fa-right-to-bracket"></i></button> 
                         <a href="cambiar" type="submit" class="btn btn-secondary mb-3" target="_blank" rel="noopener noreferrer">Cambiar contraseña</a>
+                        <a href="recuperar" type="submit" class="btn btn-secondary mb-3" target="_blank" rel="noopener noreferrer">Recuperar contraseña</a>
                     </div>
                 </form>
             </article>
@@ -319,6 +339,84 @@
             </div>
             <!-- Copyright -->
         </footer>
+
+
+
+        <script>
+            // Esta función evita colocar letras en el input del RUN
+            function validate(evt) {
+                var theEvent = evt || window.event;
+                if (theEvent.type === 'paste') {
+                    key = event.clipboardData.getData('text/plain');
+                } else {
+                    var key = theEvent.keyCode || theEvent.which;
+                    key = String.fromCharCode(key);
+                }
+                
+                var regex = /[0-9]/;
+                
+                if( !regex.test(key) ) {
+                    theEvent.returnValue = false;
+                    if(theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+
+            // Funcion encargada de verificar si el digito verificador esta vacio, ademas de validar el rut con su digito verificador
+            function checkRut() {
+                    // document.getElementById("buttonSub").disabled = true;
+                var valor = document.getElementById("rut").value;
+                var dv = document.getElementById("dv").value;
+                var button = document.getElementById("buttonSub");
+                var error = document.getElementById("error");
+
+                error.textContent = "";
+
+                    // if(dv==='' || valor===''){
+                    //     button.disabled = true;
+                    // } else {
+
+                    // Calcular Dígito Verificador
+                suma = 0;
+                multiplo = 2;
+                    
+                    // Para cada dígito del Cuerpo
+                for(i=1;i<=valor.length;i++) {
+                    
+                        // Obtener su Producto con el Múltiplo Correspondiente
+                    index = multiplo * valor.charAt(valor.length - i);
+                        
+                     // Sumar al Contador General
+                     suma = suma + index;
+                        
+                        // Consolidar Múltiplo dentro del rango [2,7]
+                    if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+                
+                }
+                    
+                    // Calcular Dígito Verificador en base al Módulo 11
+                dvEsperado = 11 - (suma % 11);
+                    
+                   // Casos Especiales (0 y K)
+                 dv = (dv == 'K')?10:dv;
+                 dv = (dv == 'k')?10:dv;
+                dv = (dv == 0)?11:dv;
+                 
+                // Validar que el Cuerpo coincide con su Dígito Verificador
+                if((dvEsperado != dv) || (valor.length <7 )) { 
+                        // rut.setCustomValidity("RUT Inválido");
+                    error.textContent = "Su número de RUN con el dígito verificador no coinciden.";
+                    error.style.color = "red";
+                    button.disabled = true;
+                }
+
+                else{
+                    button.disabled = false;
+                    error.textContent = ""
+                }
+                        
+                        // Si todo sale bien, eliminar errores (decretar que es válido)
+            }
+        </script>
 
     </body>
 </html>

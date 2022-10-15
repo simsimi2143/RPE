@@ -2,65 +2,65 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
 Route::get('menu', function () {
-    return view('menu');
+    return view('inicio');
 });
 
 Route::get('biblioteca', function () {
-    return view('biblioteca');
+    return view('inicio');
 });
 
 Route::get('notas', function () {
-    return view('notasParciales');
+    return view('inicio');
 });
 
 Route::get('cuenta', function () {
-    return view('cuentaCorriente');
+    return view('inicio');
 });
 
 Route::get('notap', function () {
-    return view('notaP');
-});
-
-Route::get('home', function () {
-    return view('home');
+    return view('inicio');
 });
 
 Route::get('asistente', function () {
-    return view('horasAsistente');
+    return view('inicio');
 });
 
 Route::get('certificado', function () {
-    return view('certificadoA');
+    return view('inicio');
 });
 
 Route::get('recuperar', function () {
-    return view('recuperarC');
+    return view('inicio');
 });
 
 Route::get('cambiar', function () {
-    return view('cambiarC');
+    return view('inicio');
 });
 
 Route::get('informacion', function () {
-    return view('informacionP');
+    return view('inicio');
 });
 
 Route::get('informacionacademica', function () {
-    return view('informacionA');
+    return view('inicio');
 });
 
 Route::get('documentos', function () {
-    return view('documentos');
+    return view('inicio');
 });
 
 Route::get('observacion', function () {
-    return view('obsFichaAcademica');
+    return view('inicio');
 });
 
 Route::get('solicitudes', function () {
-    return view('solicitudesEstudiantes');
+    return view('inicio');
 });
+
+Route::post('/', 'App\Http\Controllers\LoginController@index')->name('inicio');
+
+Route::post('menu', 'App\Http\Controllers\MenuController@index')->name('menu');

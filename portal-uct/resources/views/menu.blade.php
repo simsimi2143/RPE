@@ -16,7 +16,7 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("Fondo.png");
+                background-image: url("{{ asset('1077409.png') }} ");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
@@ -60,6 +60,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="https://tuct.uctemuco.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i> CREDENCIAL</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
@@ -95,7 +99,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-6">
-                         <h1 style = "text-align: center;">Bienvenido PABLO</h1>
+                         <h1 class="text-warning text-center">Bienvenido {{$n_com}}</h1>
                          <div class="text-center">
                             <img src="53133.png" width="300" height="300" class="img-thumbnail" alt="...">
                         </div>
@@ -103,7 +107,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-8 text-center">
                                     <ul class="list-group">
-                                        <li class="list-group-item">Rut: 19.807.541-k</li>
+                                        <li class="list-group-item">Rut: {{ $n_rut }} - {{ $n_dv }}</li>
                                         <li class="list-group-item">Nombres: Pablo Javier </li>
                                         <li class="list-group-item">Apellido paterno: Gomez</li>
                                         <li class="list-group-item">Apellido materno: Quidel</li>
@@ -195,6 +199,19 @@
             </div>
             <br>
         </section>
+
+
+
+        <iframe
+            class="fixed-bottom"
+            allow="microphone;"
+            width="250"
+            height="330"
+            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+        </iframe>
+
+
+        
         <!-- Footer -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
