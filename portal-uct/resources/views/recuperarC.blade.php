@@ -23,7 +23,7 @@
 
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
@@ -53,6 +53,10 @@
                         
                         <li class="nav-item">
                             <a class="nav-link" href="https://vip.uct.cl/posgrado/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-graduation-cap"></i> POSGRADO</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://tuct.uctemuco.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i> CREDENCIAL</a>
                         </li>
 
                         <li class="nav-item">

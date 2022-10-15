@@ -5,10 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Notas Parciales</title>
-        <link rel="icon" href="{{ asset('uct.jpg') }}">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
+        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
+        <script src="../js/sweetalert2.all.min.js"></script>
+
+        <!-- Los iconos tipo Solid de Fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        
         <!-- Styles -->
         <style>
             body {
@@ -54,6 +61,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="https://tuct.uctemuco.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i> CREDENCIAL</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
@@ -80,7 +91,7 @@
                     </div>
                 </div>
             </div>
-        </nav>      
+        </nav>   
     
         <h2 class="text-center">Notas Parciales</h2>
         <br>
@@ -272,6 +283,145 @@
     </div>
   </div>
     </div>
+
+
+        <iframe
+            class="fixed-bottom"
+            allow="microphone;"
+            width="250"
+            height="330"
+            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+        </iframe>
+
+
+        
+        <!-- Pie de página -->
+        <footer class="bg-dark text-muted">           
+            <div class="pt-5 pb-5 footer">
+                <div class="container">
+                    <div class="row">       
+                        <div class="col-sm-3">
+                            <p class="footer-widget text-black-50">
+                                <h4>CAMPUS SAN FRANCISCO</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Manuel Montt 56
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 470
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p class="pr-5 text-black-50">
+                                <h4>CAMPUS SAN JUAN PABLO II</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Rudecindo Ortega 02950
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 553 978
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <p class="footer-widget text-black-50">
+                                <h4>CAMPUS MENCHACA LIRA</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Avenida Alemania 0422
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 203 822
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p class="pr-5 text-black-50">
+                                <h4>CAMPUS LUIS RIVAS DEL CANTO</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Callejón Las Mariposas s/n
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 596
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <p class="footer-widget text-black-50">
+                                <h4>PRENSA INSTITUCIONAL</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Avenida Alemania 0211
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 428
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p class="pr-5 text-black-50">
+                                <h4>BIENESTAR ESTUDIANTIL</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Manuel Montt 56
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 424
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <p class="footer-widget text-black-50">
+                                <h4>AULA MAGNA</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Manuel Montt 56
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 471
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <p class="pr-5 text-black-50">
+                                <h4>MESA CENTRAL</h4>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i> Prieto Norte 371
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-phone mr-3"></i> +56 45 2 205 205
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center p-4">
+                © Portal del Estudiante es un proyecto realizado por la Dirección de Informática UCTemuco.
+                Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
+            </div>
+            <!-- Copyright -->
+        </footer>
     
 </body>
 </html>

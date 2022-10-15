@@ -64,6 +64,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="https://tuct.uctemuco.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-id-card"></i> CREDENCIAL</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="https://admision.uct.cl/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-hand-pointer"></i> ADMISIÓN</a>
                         </li>
 
@@ -147,7 +151,18 @@
             </div>
         </div>
 
+        
 
+        <iframe
+            class="fixed-bottom"
+            allow="microphone;"
+            width="250"
+            height="330"
+            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+        </iframe>
+
+
+        
         <!-- Pie de página -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
