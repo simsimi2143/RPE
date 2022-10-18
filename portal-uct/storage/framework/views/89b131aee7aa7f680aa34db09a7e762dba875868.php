@@ -2,9 +2,10 @@
 <html lang="es-cl">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
+        <title>Inscripcion de ramos</title>
+        <link rel="icon" href="<?php echo e(asset('iconoUCT.png')); ?>">
         <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
         <script src="../js/sweetalert2.all.min.js"></script>
 
@@ -15,15 +16,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         
-        <!-- Fondo del body de la paguina -->
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             body {
-                background-image: url("1077409.png");
+                background-image: url("<?php echo e(asset('1077409.png')); ?> ");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
             }
-
         </style>
     </head>
 
@@ -92,151 +93,182 @@
                 </div>
             </div>
         </nav>
-
-
-        <!-- Funciones generales -->
-        <section>
-            <br>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1 style = "text-align: center;" class="text-warning">Bienvenido {{ $nombres ?? '' }}</h1>
-                        
-                        <div class="text-center">
-                            <img src="yo.jpg" width="300" height="300" class="img-thumbnail" alt="...">
-                        </div>
-                        <br>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-8 text-center">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Rut: {{ $n_rut ?? '' }}</li>
-                                        <li class="list-group-item">Nombres: {{ $nombres ?? '' }} </li>
-                                        <li class="list-group-item">Apellido paterno: {{ $apellidop ?? '' }}</li>
-                                        <li class="list-group-item">Apellido materno: {{ $apellidom ?? '' }}</li>
-                                        <li class="list-group-item">Fecha de Nacimiento: {{ $fecha ?? '' }}</li>
-                                        <li class="list-group-item">Sexo: {{ $sexo ?? '' }}</li>
-                                        <li class="list-group-item">E-Mail UCTemuco: {{ $correo ?? '' }}</li>
-                                    </ul>
+        
+        
+        <br>
+        <h2 class="text-center">Inscripcion de cursos</h2>
+        <br>
+    
+        <br>
+        <div class="d-flex justify-content-center">
+            <div class="accordion accordion-flush col-6" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Cursos de carrera
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h3 class="text-center">Información del Estudiante</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" table-dark">
+                                        <tr>
+                                            <th scope="col">Rut</th>
+                                            <th scope="col">Nombre</th>
+                                        </tr>
+                                    </thead>
+                                
+                                    <tbody class="table-primary">
+                                        <tr>
+                                            <th scope="row">12.123.456-k</th>
+                                            <td>Mark</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                    
+                                <h3 class="text-center">Cursos de carrera disponibles</h3>
+                                <!-- Aquí se pondrian checkboxs para enviar formulario de ramos a inscribir-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Programacion 1
+                                    </label>
                                 </div>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-
-                    <!-- Opciones generales del portal del estudiante primera seccion -->
-                    <div class="col-md-3 order-md-first">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Inscripción de Cursos</h5>
-                                <a href="inscripcion" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Solicitud Nota P</h5>
-                                <p class="card-text">solicitud para dejar Nota Pendiente.</p>
-                                <a href="notap" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Cuenta Corriente</h5>
-                                <p class="card-text">Cta. Corriente, Beneficios, Credito complementari. Emision pagare..</p>
-                                <a href="cuenta" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Información Académica</h5>
-                                <p class="card-text">Historial academico y cursos inscritos</p>
-                                <a href="informacionacademica" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Documentos</h5>
-                                <p class="card-text">Certificado Estudiante Regular, Formularios, Formas de pago PAT.</p>
-                                <a href="documentos" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Certificado Academico</h5>
-                                <p class="card-text">Información sobre los certificados académicos.</p>
-                                <a href="certificado" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Opciones generales del portal del estudiante segunda seccion -->
-                    <div class="col-md-3 order-md-last">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Préstamos Biblioteca</h5>
-                                <p class="card-text">Consulta deuda Biblioteca.</p>
-                                <a href="biblioteca" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Horas Asistente social</h5>
-                                <p class="card-text">Reserva de horas para asistentes sociales.</p>
-                                <a href="asistente" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Notas Parciales</h5>
-                                <p class="card-text">Notas parciales y Asistencia.</p>
-                                <a href="notas" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Solicitudes Estudiantes</h5>
-                                <p class="card-text">Renuncia, Suspensión y Reincorporación.</p>
-                                <a href="solicitudes" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Ob.Ficha Academica</h5>
-                                <p class="card-text">Observación y resultados ficha académica.</p>
-                                <a href="observacion" class="btn btn-primary">ir</a>
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Administracion de Bases de Datos
+                                    </label>
+                                </div>
+            
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Programacion de robot
+                                    </label>
+                                </div>
+            
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Tópicos de matematicas para la programacion
+                                    </label>
+                                </div>
+            
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Física
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-        </section>
-
-
-
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
+        </div>
         
+        <br>
+        <div class="d-flex justify-content-center">
+            <div class="accordion accordion-flush col-6" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            DDO
+                        </button>
+                    </h2>
+        
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h3 class="text-center">Cursos DDO</h3>
+                            
+                            <!-- Aquí se pondrian checkboxs para enviar formulario de ramos a inscribir-->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Ajedrez
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Ambientalismo
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Cine chileno
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Sexualidad
+                                </label>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Vida Saludable
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success">Inscribir</button>
+        </div>
+        <br>
+        
+        <div class="d-flex justify-content-center">
+            <div class="accordion accordion-flush col-6" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Cursos inscritos
+                        </button>
+                    </h2>
+        
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <h3 class="text-center">Cursos inscritos</h3>
+                            <!-- Aquí se pondrian checkboxs para enviar formulario de ramos a inscribir-->
+                            -Curso de prueba  <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                            <div class="d-flex justify-content-center">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+
         <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+        <footer class="bg-dark text-muted">       
             <div class="pt-5 pb-5 footer">
                 <div class="container">
+                    <iframe
+                        class="fixed-bottom"
+                        allow="microphone;"
+                        width="250"
+                        height="330"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+                        </iframe> 
                     <div class="row">       
                         <div class="col-sm-3">
                             <p class="footer-widget text-black-50">
@@ -360,6 +392,5 @@
             </div>
             <!-- Copyright -->
         </footer>
-
     </body>
-</html>
+</html><?php /**PATH /home/prz/Documentos/RPE/portal-uct/resources/views/inscripcion.blade.php ENDPATH**/ ?>

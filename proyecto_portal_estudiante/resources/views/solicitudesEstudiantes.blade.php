@@ -18,12 +18,11 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("1077409.png");
+                background-image: url("{{ asset('1077409.png') }} ");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
             }
-
         </style>
     </head>
 
@@ -93,136 +92,179 @@
             </div>
         </nav>
 
-
         <!-- Funciones generales -->
         <section>
-            <br>
+        <br>
+        <br>
+        <br>
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h1 style = "text-align: center;" class="text-warning">Bienvenido {{ $nombres ?? '' }}</h1>
-                        
-                        <div class="text-center">
-                            <img src="yo.jpg" width="300" height="300" class="img-thumbnail" alt="...">
-                        </div>
+                    <div class="col-12 text-center">
+                        <!-- Texto inicial de la paguina -->
+                        <h1 class="text-warning" style = "text-align: center;">Solicitud Estudiante</h1>
+                        <p class="text-white">
+                        En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de Reincorporación, Suspensión o Renuncia. 
+                        Además puedes consultar el estado en que se encuentra tu solicitud.
+
+                        Para visualizar el contenido solo debes hacer click sobre el Título de tu interés el cual desplegará el contenido deseado.
+                        </p>
                         <br>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-8 text-center">
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Rut: {{ $n_rut ?? '' }}</li>
-                                        <li class="list-group-item">Nombres: {{ $nombres ?? '' }} </li>
-                                        <li class="list-group-item">Apellido paterno: {{ $apellidop ?? '' }}</li>
-                                        <li class="list-group-item">Apellido materno: {{ $apellidom ?? '' }}</li>
-                                        <li class="list-group-item">Fecha de Nacimiento: {{ $fecha ?? '' }}</li>
-                                        <li class="list-group-item">Sexo: {{ $sexo ?? '' }}</li>
-                                        <li class="list-group-item">E-Mail UCTemuco: {{ $correo ?? '' }}</li>
-                                    </ul>
+                        <!-- Proceso de suspensión Beneficios de arancel MINEDUC 2022 -->
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Proceso de suspensión Beneficios de arancel MINEDUC 2022</h4>
+                            <hr>
+                            <div class="text-start">
+                                <p>Estimados Estudiantes:</p>
+                                <p>Junto con saludar, informamos que desde el 02 de Agosto hasta el 29 de Septiembre se encuentra habilitado el proceso de suspensión de Beneficios Estudiantiles MINEDUC.</p>
+                                <p>Si realizaste suspensión o renuncia académica y cuentas con Gratuidad, Beca de arancel o Fondo Solidario de Crédito Universitario (FSCU) debes ingresar al siguiente link <a href="https://forms.gle/LyZ3ZygrS3TEAQjG8">https://forms.gle/LyZ3ZygrS3TEAQjG8</a> y completar el formulario online para solicitar la suspensión de tu beneficio, al que podrás ingresar solo a través de tu correo electrónico institucional.</p>
+                                <p>Descarga <a href="https://estudiantes.uct.cl/documentos/INSTRUCTIVO_SUSPENSJON_BENEFICIOS_ESTUDIANTES.pdf">AQUÍ</a> el instructivo del proceso de suspensión de Beneficios Estudiantes.</p>
+                                <p><h5>Respecto a la carga de documentos en formato PDF, debes considerar lo siguiente:</h5></p>
+                                <p><strong>1. Formulario suspensiones:</strong> Solo lo debes cargar en caso de contar con Beca de arancel. Se exime de esta obligación a los estudiantes que tengan Gratuidad.</p>
+                                <p><strong>2. Documento de respaldo para acreditar motivo de suspensión:</strong> Solo lo debes cargar en caso de contar con Gratuidad o Becas de arancel, toda vez que las suspensiones totales desde el año de asignación del beneficio a la fecha (incluyendo solicitud actual) sean superiores a 02 semestres académicos. Se exime de esta obligación a los estudiantes que tengan FSCU.</p>
+                            </div>
+                            <p><strong>*EL PROCESO DE SUSPENSIÓN ES DE EXCLUSIVA RESPONSABILIDAD DEL ESTUDIANTE*</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Ingresar Solicitud</strong>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <!-- Tabla datos alupno -->
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th scope="col">Rut</th>
+                                                <th scope="col">Nombre del alumno</th>
+                                                <th scope="col">Celular</th>
+                                                <th scope="col">E-Mail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>21080232-2</th>
+                                                <td>Pablo Javier Gomez Quidel</td>
+                                                <td>+56953699462</td>
+                                                <td>Pgomez2021@uct.cl</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
+                            <select class="form-select text-center" aria-label="Default select example">
+                                <option selected><strong>Seleccione una Carrera...</strong></option>
+                                <option value="1">154 - Plan: 1 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                <option value="2">154 - Plan: 2 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                <option value="3">154 - Plan: 3 : INGENIERIA CIVIL EN INFORMATICA</option>
+                            </select>
+                            <div class="accordion-body">
+                                <table class="table">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th scope="col">Beneficios</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>GRATUIDAD MATRICULA MINEDUC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GRATUIDAD ARANCEL MINEDUC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BRECHA GRATUIDAD ARANCEL UCT</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br>
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Registro</th>
+                                                <th scope="col">Año Ingreso	</th>
+                                                <th scope="col">Carrera</th>
+                                                <th scope="col">Situación</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>2064351647</th>
+                                                <td>2021</td>
+                                                <td>INGENIERÍA CIVIL EN INFORMÁTICA</td>
+                                                <td>REGULAR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p>
+                                Formulario ingreso solicitud
+                                <select class="form-select text-center" aria-label="Default select example">
+                                    <option selected><strong>Tipo de solicitud..</strong></option>
+                                    <option value="1">RENUNCIA</option>
+                                    <option value="1">SUSPENCION</option>
+                                </select>
+                            </p>
                         </div>
-                        <br>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <strong>Resultados de la Solicitud</strong>
+                            </button>
+                        </h2>
 
-                    <!-- Opciones generales del portal del estudiante primera seccion -->
-                    <div class="col-md-3 order-md-first">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Inscripción de Cursos</h5>
-                                <a href="inscripcion" class="btn btn-primary">ir</a>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <p><strong>Ingrese una carrera para consultar el estado de su solicitud:</strong></p>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected><strong>Seleccione la carrera</strong></option>
+                                        <option value="1">154 - Plan: 1 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
+                            <div class="accordion-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th scope="col">Código Solicitud</th>
+                                                <th scope="col">Fecha Solicitud</th>
+                                                <th scope="col">Tipo Solicitud</th>
+                                                <th scope="col">Estado</th>
+                                                <th scope="col">Observación</th>
+                                                <th scope="col">Comprobante</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Solicitud Nota P</h5>
-                                <p class="card-text">solicitud para dejar Nota Pendiente.</p>
-                                <a href="notap" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Cuenta Corriente</h5>
-                                <p class="card-text">Cta. Corriente, Beneficios, Credito complementari. Emision pagare..</p>
-                                <a href="cuenta" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Información Académica</h5>
-                                <p class="card-text">Historial academico y cursos inscritos</p>
-                                <a href="informacionacademica" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Documentos</h5>
-                                <p class="card-text">Certificado Estudiante Regular, Formularios, Formas de pago PAT.</p>
-                                <a href="documentos" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Certificado Academico</h5>
-                                <p class="card-text">Información sobre los certificados académicos.</p>
-                                <a href="certificado" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Opciones generales del portal del estudiante segunda seccion -->
-                    <div class="col-md-3 order-md-last">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Préstamos Biblioteca</h5>
-                                <p class="card-text">Consulta deuda Biblioteca.</p>
-                                <a href="biblioteca" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Horas Asistente social</h5>
-                                <p class="card-text">Reserva de horas para asistentes sociales.</p>
-                                <a href="asistente" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Notas Parciales</h5>
-                                <p class="card-text">Notas parciales y Asistencia.</p>
-                                <a href="notas" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Solicitudes Estudiantes</h5>
-                                <p class="card-text">Renuncia, Suspensión y Reincorporación.</p>
-                                <a href="solicitudes" class="btn btn-primary">ir</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Ob.Ficha Academica</h5>
-                                <p class="card-text">Observación y resultados ficha académica.</p>
-                                <a href="observacion" class="btn btn-primary">ir</a>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
+            <br>
+            <br>            
         </section>
 
-
-
+        
+        
         <iframe
             class="fixed-bottom"
             allow="microphone;"
