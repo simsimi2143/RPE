@@ -93,196 +93,209 @@
             </div>
         </nav>   
     
-        <h2 class="text-center">Notas Parciales</h2>
-        <br>
-        <h6 class="text-center">En esta sección encontrarás las notas parciales y los porcentajes de asistencia de las carreras.</h6>
-        <br>
-        <div class="d-flex justify-content-center">
-            <div class="accordion accordion-flush col-6" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Notas Parciales
-                        </button>
-                    </h2>
-    
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-        <h3 class="text-center">Información del Estudiante</h3>
-      <div class="table-responsive">
-        <table class="table">
-            <thead class=" table-dark">
-                <tr>
-                <th scope="col">Rut</th>
-                <th scope="col">Nombre</th>
-                </tr>
-            </thead>
-            <tbody class="table-primary">
-                <tr>
-                    <th scope="row">12.123.456-k</th>
-                    <td>Mark</td>
-                </tr>
+        <section>
+            <br>
+            <br>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Texto inicial de la paguina -->
+                        <h1 class="text-warning" style = "text-align: center;">Solicitud Estudiante</h1>
+                        <p>
+                            En esta sección encontrarás información académica: 
+                            cursos inscritos, cursos aprobados, cursos reprobados, competencias genéricas y créditos de libre disposición.
+                        </p>
+                    </div>
+                </div>
                 
-               
-            </tbody>
-        </table>
-    </div>
-    </div>
-    <h6>Seleccione carrera:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h6>Seleccione Semestres:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h6> Seleccione una Asignatura:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h3 class="text-center">Notas Parciales</h3>
-    <div class="table-responsive">
-        <table class="table">
-            <thead class=" table-dark">
-                <tr>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Porcentaje</th>
-                <th scope="col">Nota</th>
-                <th scope="col">Tipo de Evaluacion</th>
-                </tr>
-            </thead>
-            <tbody class="table-primary">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>@mdo</td>
-                </tr>
-                
-               
-            </tbody>
-        </table>
-    </div>
-    </div>
-  </div>
-  <br>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Asistencias
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-      <h3 class="text-center">Información del Estudiante</h3>
-      <div class="table-responsive">
-        <table class="table">
-            <thead class=" table-dark">
-                <tr>
-                <th scope="col">Rut</th>
-                <th scope="col">Nombre</th>
-                </tr>
-            </thead>
-            <tbody class="table-primary">
-                <tr>
-                    <th scope="row">12.123.456-k</th>
-                    <td>Mark</td>
-                </tr>
-                
-               
-            </tbody>
-        </table>
-    </div>
-    </div>
-    <h6>Seleccione carrera:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h6>Seleccione Semestres:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h6> Seleccione una Asignatura:</h6>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
-    <br>
-    <h3 class="text-center">Asistencias</h3>
-    <div class="table-responsive">
-        <table class="table">
-            <thead class=" table-dark">
-                <tr>
-                <th scope="col">N° Clase</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Hora Inicio</th>
-                <th scope="col">Asistencia</th>
-                </tr>
-            </thead>
-            <tbody class="table-primary">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Notas Parciales</strong>
+                            </button>
+                        </h2>
+                        
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <div class="text-center">
+                                        <p><strong>Información del Estudiante</strong></p>
+                                        <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">RUT</th>
+                                                            <th scope="col">NOMBRE</th>
+                                                        </tr>
+                                                    </thead>
 
-                </tr>
-                
-               
-            </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-    </div>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>2064351647</th>
+                                                            <td>PABLO BENJAMÍN GOMEZ CORTEZ</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <p><strong>Seleccione una Carrera:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Carrera...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                            
+                                        <p><strong>Seleccione una Semestre:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Semestre...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                            
+                                        <p><strong>Seleccione una Semestre:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Asignatura...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                        
+                                        <p><strong>Notas Parciales</strong></p>
+                                        
+                                        <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">Descripcion</th>
+                                                            <th scope="col">Fecha</th>
+                                                            <th scope="col">Porcentaje</th>
+                                                            <th scope="col">Nota</th>
+                                                            <th scope="col">Tipo de Evaluacion</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <th></th>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- segunda opcion  -->
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <strong>Asistencia</strong>
+                            </button>
+                        </h2>
+
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <div class="text-center">
+                                        <p><strong>Información del Estudiante</strong></p>
+                                        <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">RUT</th>
+                                                            <th scope="col">NOMBRE</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>2064351647</th>
+                                                            <td>PABLO BENJAMÍN GOMEZ CORTEZ</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <p><strong>Seleccione una Carrera:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Carrera...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                            
+                                        <p><strong>Seleccione una Semestre:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Semestre...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                            
+                                        <p><strong>Seleccione una Semestre:</strong></p>
+                                            
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Asignatura...</strong></option>
+                                            <option value="1">""</option>
+                                            <option value="2">""</option>
+                                            <option value="3">""</option>
+                                        </select>
+                                
+                                        <div class="text-center">
+                                            <p><strong>Asistencias</strong></p>                                  
+                                            <div class="accordion-body">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead class="table-primary">
+                                                            <tr>
+                                                                <th scope="col">N° Clase</th>
+                                                                <th scope="col">Fecha</th>
+                                                                <th scope="col">Hora de Inicio</th>
+                                                                <th scope="col">Asistencia</th>
+                                                            </tr>
+                                                        </thead>
+                                                    
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>""</th>
+                                                                <td> ""</td>
+                                                                <td>""</td>
+                                                                <td>""</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
 
         <iframe

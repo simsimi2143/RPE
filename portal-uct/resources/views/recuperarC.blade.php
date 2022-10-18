@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-cl">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Recuperar Contraseña</title>
         <link rel="icon" href="{{ asset('iconoUCT.png') }}">
-        
+        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
+        <script src="../js/sweetalert2.all.min.js"></script>
+
+        <!-- Los iconos tipo Solid de Fontawesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        <script src="../js/sweetalert2.all.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         <style>
+
             body {
                 background-image: url("{{ asset('1077409.png') }} ");
+                background-attachment: fixed;
                 background-repeat: no-repeat;
-            }           
+                background-size: cover; 
+            }
+
+            #sect1{
+                background-color: rgba(255, 255, 255, .3);
+                width: auto;
+            }
         </style>
     </head>
 
 
-
     <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
@@ -87,28 +98,41 @@
                 </div>
             </div>
         </nav>
+
+        <h2 class="text-center text-warning">Recuperar contraseña</h2>
+
+        <br>
+        <br>
+        <br>
+
+        <div  class="d-flex justify-content-center border border-5 w-auto p-3" id="sect1">
+            <form>
+                <div class="mb-3 ">
+                    <label for="exampleInputEmail1" class="form-label">Ingrese su rut:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="RUN: 218763421">
+                </div>
+                    
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo con todos los datos entregados</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Contraseña</button>
+            </form>
+        </div>
+
+
+
+        <iframe
+            class="fixed-bottom"
+            allow="microphone;"
+            width="250"
+            height="330"
+            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+        </iframe>
+
+
         
-
-
-        <section>
-            <h3 class="text-center">Recuperar Contraseña</h3>
-            <article class="container-fluid">
-                <form action="" class="row g-3 justify-content-center text-center">
-                    <div class="input-group has-validation col-lg-2">
-                        <label class="input-group-text" for="floatingInput"><i class="fa-solid fa-user"></i>Run sin puntos ni guión</label>
-                        <input type="number" class="form-control input-sm" id="floatingInput" placeholder="N°RUN">
-                    </div>
-
-                    <div>
-                        <a href="" type="submit" class="btn btn-success mb-3">Enviar contraseña</a> 
-                        <a href="" type="submit" class="btn btn-danger mb-3">Cerrar</a>
-                    </div>
-                </form>
-            </article>
-        </section>
-
-
-
         <!-- Pie de página -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
@@ -235,8 +259,6 @@
                 Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
             </div>
             <!-- Copyright -->
-        </footer>
-
-    
+        </footer>     
     </body>
 </html>

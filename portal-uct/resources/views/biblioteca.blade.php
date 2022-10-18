@@ -100,47 +100,71 @@
             </div>
         </div>
         
-        <div class="table-responsive">
-            <table class="table">
-                <thead class=" table-dark">
-                    <tr>
-                    <th scope="col">Material</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col">Autor</th>
-                    <th scope="col">Fecha Prestamo</th>
-                    <th scope="col">Fecha devolucion</th>
-                    <th scope="col">Biblioteca</th>
-                    </tr>
-                </thead>
-                <tbody class="table-primary">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    
+        <section>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Texto inicial de la paguina -->
+                        <h1 class="text-warning" style = "text-align: center;">Biblioteca</h1>
+                    </div>
+                    <p>
+                            En esta sección encontrarás información del Pestamo Biblioteca: 
+                     </p>
+                </div>
                 
-                </tbody>
-            </table>
-        </div>
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Prestamo Biblioteca</strong>
+                            </button>
+                        </h2>
+                        
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="text-start">
+                                    <div class="text-center">
+                                        <p><strong>Información del Prestamo a Biblioteca</strong></p>
+                                        <div class="accordion-body">
+
+                                        </div>
+                                        
+                                        <div class="accordion-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="table-primary">
+                                                        <tr>
+                                                            <th scope="col">Material</th>
+                                                            <th scope="col">Título</th>
+                                                            <th scope="col">Autor</th>
+                                                            <th scope="col">Fecha Préstamo</th>
+                                                            <th scope="col">Fecha Devolución</th>
+                                                            <th scope="col">Biblioteca</th>
+                                                        </tr>
+                                                    </thead>
+                                                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>""</th>
+                                                            <td>""</td>
+                                                            <td>""</td>
+                                                            <td>""</td>
+                                                            <td>""</td>
+                                                            <td>""</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 

@@ -18,7 +18,7 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("Fondo.png");
+                background-image: url("1077409.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
@@ -110,19 +110,175 @@
                                     que contamos con un nuevo servicio de Firma Electrónica Avanzada, el cual permitirá brindarles 
                                     una mejor atención y disminuir los tiempos de espera en lo que se requiere a solicitudes de certificados.
                                 </p>
+                                <a class="btn btn-primary" href="https://estudiantes.uct.cl/certificados_firmas_digitales/documentos/Firma_Electronica_Avanzada_DARA.pdf" role="button">Leer más...</a>
                             </div>
                         </div>
+                        <!-- Instrucciones y aclaraciones sobre los documentos -->
                         <div class="card border-danger mb-3">
                             <div class="card-body text-danger">
                                 <p class="card-text">
-                                    * Para imprimir los documentos se recomienda abrir con Adobe Acrobat Reader.
-                                    * Debe habilitar la opción de ventanas emergentes de su navegador.
+                                    * Para imprimir los documentos se recomienda abrir con Adobe Acrobat Reader, ademas
+                                    debe habilitar la opción de ventanas emergentes de su navegador. *
                                 </p>
                             </div>
                         </div>
+                        <br>
+                        <!-- Opcione de seleccionar carrera y semestre -->
+                        <div class="card border-white">
+                            <div class="card-header bg-primary text-white"><strong>Carrera</strong></div>
+                            <div class="card-body">
+                                <div class="text-start">
+                                    <p><strong>Seleccione una Carrera:</strong></p>
+                                    <p class="card-text">
+                                        <select class="form-select text-center" aria-label="Default select example">
+                                            <option selected><strong>Seleccione una Carrera...</strong></option>
+                                            <option value="1">154 - Plan: 1 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                            <option value="2">154 - Plan: 2 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                            <option value="3">154 - Plan: 3 : INGENIERIA CIVIL EN INFORMATICA</option>
+                                        </select>
+                                    </p>
+                                    <p><strong>Seleccione Semestre:</strong></p>
+                                    <select class="form-select text-center" aria-label="Default select example" disabled> <!-- etiqueta Disable que desabilita la opcion de seleccionar una opcion (ya que ensi el semestre es seleccionado de forma automatica seguna la carrera) -->
+                                        <option selected><strong>Seleccione el semestre...</strong></option>
+                                        <option value="1">SEGUNDO /2022</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Certificados -->
+                        <div class="card border-white">
+                            <div class="card-header bg-primary text-white"><strong>CERTIFICADOS</strong></div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">C.Estudiante Regular</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">C.Académico</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">C.Conducta</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">C.Permanencia</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- Certificado Estudiante Regular -->
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                        <div class="card border-white">
+                                            <div class="card-header bg-primary text-white"><strong>Certificado Estudiante Regular</strong></div>
+                                            <div class="card-body">
+                                                <div class="text-start">
+                                                    <p><strong>Puedes seleccionar los fines para el que deseas el certificado:</strong></p>
+                                                    <p class="card-text">
+                                                        <select class="form-select text-center" aria-label="Default select example">
+                                                            <option selected><strong>Fines:</strong></option>
+                                                            <option value="1">BENEFICIOS ESTUDIANTILES Y ASIGNACION FAMILIAR</option>
+                                                            <option value="2">PARA LOS FINES QUE ESTIME CONVENIENTE</option>
+                                                            <option value="3">SEGURO ESCOLAR</option>
+                                                        </select>
+                                                    </p>
+                                                </div>
+                                                <br>
+                                                <a class="btn btn-primary" href="" role="button">Generar Certificado</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Certificado Académico -->
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                        <div class="card border-white">
+                                            <div class="card-header bg-primary text-white"><strong>Certificado Académico</strong></div>
+                                            <div class="card-body">
+                                                <div class="text-start">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            Historia Académica
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Notas Periodo
+                                                        </label>
+                                                    </div>
+                                                    <p><strong>Estado de los Cursos:</strong></p>
+                                                    <p class="card-text">
+                                                        <select class="form-select text-center" aria-label="Default select example">
+                                                            <option selected><strong>Seleccione..</strong></option>
+                                                            <option value="1">APROBADOS</option>
+                                                            <option value="2">TODOS LOS CURSOS</option>
+                                                            <option value="3">TODOS LOS CURSOS(SOLO CON NOTA)</option>
+                                                        </select>
+                                                    </p>
+                                                    <br>
+                                                    <a class="btn btn-primary" href="#" role="button">Descargar Certificado Academico</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Certificado conducta -->
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                                        <div class="card border-white">
+                                            <div class="card-header bg-primary text-white"><strong>Certificado de Conducta</strong></div>
+                                            <div class="card-body">
+                                                <div class="text-start">
+                                                    <p>
+                                                        <strong>Sanciones:</strong>
+                                                        Durante su permanencia el(la) estudiante no tuvo sanciones disciplinarias por contravención al 
+                                                        Reglamento de Investigaciones Sumarias y Sumarios que instruyen a los Estudiantes de la Universidad 
+                                                        Católica de Temuco.
+                                                    </p>
+                                                    <p>
+                                                        <strong>Observación:</strong>
+                                                        Sin Observaciones
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn-primary" href="#" role="button">Descargar Certificado de Conducta</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Certificado permanencia -->
+                                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                                        <div class="card border-white">
+                                            <div class="card-header bg-primary text-white"><strong>Certificado de Permanencia</strong></div>
+                                            <div class="card-body">
+                                                <p>
+                                                    Durante su permanencia el(la) estudiante no tuvo impedimentos académicos ni sanciones 
+                                                    disciplinarias por contravenir el Reglamento del Alumno Regular de la Universidad.
+                                                </p>
+                                                <a class="btn btn-primary" href="#" role="button">Descargar Certificado de Permanencia</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Convenio de prestación de servicios -->
+                        <div class="card border-white">
+                            <div class="card-header bg-primary text-white"><strong>Convenio de prestación de servicios</strong></div>
+                            <div class="card-body">
+                                <p><strong>Descargar convenio prestación de servicios</strong></p>
+                                <a class="btn btn-primary" href="#" role="button">Descargar Convenio</a>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Formulario de Apelación para Causal de Eliminación -->
+                        <div class="card border-white">
+                            <div class="card-header bg-primary text-white"><strong>Formulario de Apelación para Causal de Eliminación</strong></div>
+                            <div class="card-body">
+                                <p>El formulario debe ser completado y entregado impreso en tu carrera.</p>
+                                <a class="btn btn-primary" href="https://estudiantes.uct.cl/certificados_firmas_digitales/documentos/formulario_apelacion.pdf" role="button">Descargar Convenio</a>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
+            <br>
         </section>
 
 

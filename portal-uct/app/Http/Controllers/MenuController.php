@@ -7,35 +7,40 @@ use App\Http\Controllers\Controller;
 
 
 class MenuController extends Controller {
-    
     public function index() {
-        //Declaracion de varaibles a partir de la informacion de la sesion
-        // $n_rut = session('rut_nro');
-        // $n_dv  = session('dv_nro'); 
-
-        //Pregunta si existe la sesion, sino avanza
+        // Preguntamos si la sesión existente está activa
+        // ya que de esta forma procedemos a tomar los valores adquiridos de la vista anterior 
+        // y así tomarlos en esta para trabajarlos.
         if(!session()->has('rut_nro')) {
             return view('inicio');
         } else {
-            // Inicializamos variables que tomara la consulta
+            // Inicializamos las variables de nuestro stored procedure
+            // las cuales almacenarán los datos que se van a registrar en la BD 
             $n_rut = session('rut_nro');
-            $n_dv  = session('dv_nro'); 
-            $nom_com = session('nom_com');
-            $tel = $_POST['telef1'];
-            $email = $_POST['email'];
-            $oficina = $_POST['oficina'];
-            $visi_esquema_completo = $_POST['visi_esquema_completo'];
+            $n_contra  = session('contra');
 
-            if($visi_esquema_completo == "NN"){
-                $visi_esquema_completo = '';
-            }
+
+            // Realizamos nuestra consulta mediante el stored procedure, además se le asigna un formato a la fecha de nacimiento 
+            // para no generar conflicto en el registro, cabe destacar que el llamado de esta consulta debe ser en el mismo 
+            // orden que en el de nuestro stored procedure 
+            $nombres = DB::select("SELECT Nombres FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $apellidop = DB::select("SELECT ApellidoP FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $apellidom = DB::select("SELECT ApellidoM FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $fecha = DB::select("SELECT Fecha_Nac FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $sexo = DB::select("SELECT Sexo FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $correo = DB::select("SELECT Correo FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+            $run = DB::select("SELECT Run FROM Usuarios WHERE Run = ? AND Contraseña = ?", [$n_rut, $n_contra]);
+
             
-            // Accedemos a la base de datos y generamos la consulta para determinar si el usuario en funcionario de planta
-            // mediante esta información se activa o se desactiva la opción de ingresar número de oficina
-            $query_uct = DB::select("SET NOCOUNT ON; exec TRAZA.dbo.confirma_registro @pers_rut_nro = ?, @pers_dv = ?, @pers_email = ?, @pers_fono_per = ?, @pers_esquema_completo = ?, @pers_extra1 = ?", [$n_rut,$n_dv,$email,$tel,$visi_esquema_completo,$oficina]);
-            return view('qr',[
-                "n_com" => $nom_com,]);
+            return view('menu', [
+                'nombres' => $nombres,
+                'apellidop' => $apellidop,
+                'apellidom' => $apellidom,
+                'fecha' => $fecha,
+                'sexo' => $sexo,
+                'correo' => $correo,
+                'rut' => $run
+            ]);
         }
     }
-
 }

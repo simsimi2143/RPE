@@ -25,16 +25,6 @@
                 font-family: 'Noto Sans SC', sans-serif;
                 font-weight: bold;
             }
-
-            .run{
-                display: flex;
-            }
-
-            .guion{
-                font-family: 'Roboto', sans-serif;
-                font-weight: bold;
-                font-size: 150%;
-            }
                  
         </style>
     </head>
@@ -112,19 +102,14 @@
             
             <article class="container">
                 <form action="{{route('inicio')}}" method="POST" class="form-inline row justify-content-center g-3" name="frm1" onload="setValue()">
+                    @csrf
                     <div class="form-floating col-lg-3 run">
-                        <input value="@if(Session::has('rut_nro')){{ Session::get('rut_nro')}}@endif" class="form-control input-sm" id="floatingInput" onpaste="return false;" ondrop="return false;" inputmode="numeric" onkeypress='validate(event)' class="form-control form-control-lg" size=8 minlength="7" maxlength="8" type="text" pattern="[0-9]+" name="rut" id="rut" placeholder="N° RUN" oninput="checkRut()">
-                        <label for="floatingInput">RUN</label>
-
-                        <div class="text-white text-center guion col-1">-</div>
-                            
-                        <div class="form-floating dv">
-                            <input value="@if(Session::has('dv_nro')){{ Session::get('dv_nro') }}@endif" onpaste="return false;" ondrop="return false;" class="form-control input-sm" size=2 minlength="1" maxlength="1" type="text" name="dv" id="dv" placeholder="dv" oninput="checkRut()" onkeyup="this.value = this.value.toUpperCase();" >
-                        </div>
+                        <input value="@if(Session::has('rut_nro')){{ Session::get('rut_nro')}}@endif" class="form-control input-sm" id="floatingInput rut" onpaste="return false;" ondrop="return false;" inputmode="numeric" onkeypress='validate(event)' class="form-control form-control-lg" size=9 minlength="7" maxlength="9" type="text" pattern="[0-9]+" name="rut" id="rut" placeholder="N° RUN" oninput="checkRut()">
+                        <label for="floatingInput">RUN sin puntos ni guión</label>
                     </div>
                     
                     <div class="form-floating col-lg-3">
-                        <input value="@if(Session::has('contra')){{ Session::get('contra')}}@endif" type="password" class="form-control input-sm" id="floatingPassword" onpaste="return false;" ondrop="return false;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Contraseña" required>
+                        <input value="@if(Session::has('contra')){{ Session::get('contra')}}@endif" type="password" class="form-control input-sm" id="floatingPassword contra" onpaste="return false;" ondrop="return false;"  name="contra" placeholder="Contraseña" required>
                         <label for="floatingPassword">Contraseña</label>
                     </div>
 
@@ -202,20 +187,18 @@
 
 
 
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
-
         
         <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+        <footer class="bg-dark text-muted">       
             <div class="pt-5 pb-5 footer">
                 <div class="container">
+                    <iframe
+                        class="fixed-bottom"
+                        allow="microphone;"
+                        width="250"
+                        height="330"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+                        </iframe> 
                     <div class="row">       
                         <div class="col-sm-3">
                             <p class="footer-widget text-black-50">
@@ -360,62 +343,37 @@
                     if(theEvent.preventDefault) theEvent.preventDefault();
                 }
             }
+        </script>
 
-            // Funcion encargada de verificar si el digito verificador esta vacio, ademas de validar el rut con su digito verificador
-            function checkRut() {
-                    // document.getElementById("buttonSub").disabled = true;
-                var valor = document.getElementById("rut").value;
-                var dv = document.getElementById("dv").value;
-                var button = document.getElementById("buttonSub");
-                var error = document.getElementById("error");
 
-                error.textContent = "";
 
-                    // if(dv==='' || valor===''){
-                    //     button.disabled = true;
-                    // } else {
-
-                    // Calcular Dígito Verificador
-                suma = 0;
-                multiplo = 2;
-                    
-                    // Para cada dígito del Cuerpo
-                for(i=1;i<=valor.length;i++) {
-                    
-                        // Obtener su Producto con el Múltiplo Correspondiente
-                    index = multiplo * valor.charAt(valor.length - i);
-                        
-                     // Sumar al Contador General
-                     suma = suma + index;
-                        
-                        // Consolidar Múltiplo dentro del rango [2,7]
-                    if(multiplo < 7) { multiplo = multiplo + 1; } else { multiplo = 2; }
+        <script>
+            // Script encargado de devolver la alerta según el valor que tenga el input oculto de id "estado"
+            $(document).ready(function() {
+                var rut = document.getElementById("rut").value;
+                var contra = document.getElementById("contra").value;
                 
+                // En caso de error arroja una alerta de error y vuelve a la vista QR
+                if (rut != 'rut'){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'El usuario ingresado no es válido',
+                        showConfirmButton: false,
+                        timer: 2000,
+                    })
                 }
-                    
-                    // Calcular Dígito Verificador en base al Módulo 11
-                dvEsperado = 11 - (suma % 11);
-                    
-                   // Casos Especiales (0 y K)
-                 dv = (dv == 'K')?10:dv;
-                 dv = (dv == 'k')?10:dv;
-                dv = (dv == 0)?11:dv;
-                 
-                // Validar que el Cuerpo coincide con su Dígito Verificador
-                if((dvEsperado != dv) || (valor.length <7 )) { 
-                        // rut.setCustomValidity("RUT Inválido");
-                    error.textContent = "Su número de RUN con el dígito verificador no coinciden.";
-                    error.style.color = "red";
-                    button.disabled = true;
-                }
-
                 else{
-                    button.disabled = false;
-                    error.textContent = ""
-                }
-                        
-                        // Si todo sale bien, eliminar errores (decretar que es válido)
-            }
+                // En caso de exito arroja una alerta de success y retorna la vista de inicio
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Ha registrado con éxito',
+                        showConfirmButton: false,
+                        timer: 4500,
+                    }).then(function(){
+                        window.location.href = "/";
+                    });
+                }          
+            });
         </script>
 
     </body>

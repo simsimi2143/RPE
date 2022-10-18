@@ -18,7 +18,7 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("{{ asset('1077409.png') }} ");
+                background-image: url("1077409.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
@@ -27,7 +27,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
                     <img src="iconoUCT.png" alt="UCT" width="30" height="30">
@@ -101,8 +101,8 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <!-- Texto inicial de la paguina -->
-                        <h1 class="text-warning" style = "text-align: center;">Solicitud Estudiante</h1>
-                        <p>
+                        <h1 class="text-warning" style = "text-align: center;">Información Académica</h1>
+                        <p class="text-white">
                             En esta sección encontrarás información académica: 
                             cursos inscritos, cursos aprobados, cursos reprobados, competencias genéricas y créditos de libre disposición.
                         </p>
@@ -180,7 +180,7 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- segunda opcion  -->
+                    <!-- segunda opcion -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -203,6 +203,7 @@
                                     </select>
                                 </div>
                                 <br>
+                                <!-- Información de la Carrera -->
                                 <div class="text-center">
                                     <p><strong>Información de la Carrera</strong></p>
                                     <div class="accordion-body">
@@ -235,8 +236,262 @@
                                 <div class="text-start">
                                     <p><strong>el siguiente formulario:</strong></p>
                                     <p>
-                                        Ingresa un año y/o un semestre, luego haz clic en 'Ver Carga Académica' para ver los resultados en pantalla o en 'Generar PDF' para generar un documento el cual podras imprimir.
+                                        Ingresa un año y/o un semestre, luego haz clic en 'Ver Carga Académica' para ver 
+                                        los resultados en pantalla o en 'Generar PDF' para generar un documento el cual podras imprimir.
                                     </p>
+
+                                </div>
+                                <!-- Tabla de cursos del actual semestre -->
+                                <br>
+                                <h4><strong>Carga Académica</strong></h4>
+                                <br>
+                                <div class="text-center">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th scope="col">Año</th>
+                                                        <th scope="col">Semestre</th>
+                                                        <th scope="col">Siglas</th>
+                                                        <th scope="col">Nombre Curso</th>
+                                                        <th scope="col">Sección</th>
+                                                        <th scope="col">Créditos</th>
+                                                        <th scope="col">Tipo</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO1116</td>
+                                                        <td>MANTENCION Y ADMINISTRACION DE SISTEMAS</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2022</th>
+                                                        <td>2</td>
+                                                        <td>INFO...</td>
+                                                        <td>Ramo</td>
+                                                        <td>2</td>
+                                                        <td>6</td>
+                                                        <td>MIN</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- Cursos no evaluados-->
+                                <h4><strong>Cursos sin evaluar</strong></h4>
+                                <br>
+                                <div class="text-center">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th scope="col">Año</th>
+                                                        <th scope="col">Semestre</th>
+                                                        <th scope="col">Siglas</th>
+                                                        <th scope="col">Nombre Curso</th>
+                                                        <th scope="col">Sección</th>
+                                                        <th scope="col">Créditos</th>
+                                                        <th scope="col">Tipo</th>
+                                                        <th scope="col">Fecha fin</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>2021</th>
+                                                        <td>1</td>
+                                                        <td>TEVU</td>
+                                                        <td>TRANSICIÓN EFECTIVA EN LA VIDA UNIVERSITARIA</td>
+                                                        <td>43</td>
+                                                        <td>2</td>
+                                                        <td>MIN</td>
+                                                        <td>02-07-21</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tabla de Salas Asignadas-->
+                                <h4><strong>Salas Asignadas</strong></h4>
+                                <br>
+                                <div class="text-center">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                                <thead class="table-primary">
+                                                    <tr>
+                                                        <th  class="text-start" colspan="6">INFO1116 - MANTENCION Y ADMINISTRACION DE SISTEMAS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sección: 3</td>
+                                                        <td>EB-304</td>
+                                                        <td>Lunes</td>
+                                                        <td>13:50 a 17:10</td>
+                                                        <td>EDIFICIO </td>
+                                                        <td>CAMPUS SAN JUAN PABLO II</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -245,25 +500,21 @@
             </div>
             <br>
             <br>
-
         </section>
-
-
         
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
 
         
         <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+        <footer class="bg-dark text-muted">       
             <div class="pt-5 pb-5 footer">
                 <div class="container">
+                    <iframe
+                        class="fixed-bottom"
+                        allow="microphone;"
+                        width="250"
+                        height="330"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+                        </iframe> 
                     <div class="row">       
                         <div class="col-sm-3">
                             <p class="footer-widget text-black-50">

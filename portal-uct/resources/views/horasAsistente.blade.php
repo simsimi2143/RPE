@@ -149,19 +149,19 @@
 
 
 
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
-
 
         
         <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+        <footer class="bg-dark fixed-bottom text-muted">           
             <div class="pt-5 pb-5 footer">
+                <iframe
+                    class="fixed-bottom"
+                    allow="microphone;"
+                    width="250"
+                    height="330"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+                </iframe>
+                
                 <div class="container">
                     <div class="row">       
                         <div class="col-sm-3">

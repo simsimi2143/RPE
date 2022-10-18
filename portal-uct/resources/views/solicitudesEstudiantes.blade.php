@@ -102,7 +102,7 @@
                     <div class="col-12 text-center">
                         <!-- Texto inicial de la paguina -->
                         <h1 class="text-warning" style = "text-align: center;">Solicitud Estudiante</h1>
-                        <p>
+                        <p class="text-white">
                         En esta sección encontrarás el formulario mediante el cual puedes hacer una solicitud de Reincorporación, Suspensión o Renuncia. 
                         Además puedes consultar el estado en que se encuentra tu solicitud.
 

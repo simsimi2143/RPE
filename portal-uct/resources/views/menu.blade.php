@@ -4,26 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('Logo_UCT.png') }}">
+        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
+        <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
         <script src="../js/sweetalert2.all.min.js"></script>
 
-        <!-- Los iconos tipo Solid de Fontawesome -->
+        <!-- Los iconos tipo Solid de Fontawesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("{{ asset('1077409.png') }} ");
+                background-image: url("1077409.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
             }
 
         </style>
-
     </head>
 
     <body>
@@ -99,28 +100,39 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-6">
-                         <h1 class="text-warning text-center">Bienvenido {{$n_com}}</h1>
-                         <div class="text-center">
-                            <img src="53133.png" width="300" height="300" class="img-thumbnail" alt="...">
+                        <h1 style = "text-align: center;" class="text-warning">Bienvenido {{ $nombres ?? '' }}</h1>
+                        
+                        <div class="text-center">
+                            <img src="yo.jpg" width="300" height="300" class="img-thumbnail" alt="...">
                         </div>
+                        <br>
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-8 text-center">
                                     <ul class="list-group">
-                                        <li class="list-group-item">Rut: {{ $n_rut }} - {{ $n_dv }}</li>
-                                        <li class="list-group-item">Nombres: Pablo Javier </li>
-                                        <li class="list-group-item">Apellido paterno: Gomez</li>
-                                        <li class="list-group-item">Apellido materno: Quidel</li>
-                                        <li class="list-group-item">Fecha de Nacimiento: 03-03-2003</li>
-                                        <li class="list-group-item">Sexo: Masculino</li>
-                                        <li class="list-group-item">E-Mail UCTemuco: Pgomez2021@uct.cl</li>
+                                        <li class="list-group-item">Rut: {{ $n_rut ?? '' }}</li>
+                                        <li class="list-group-item">Nombres: {{ $nombres ?? '' }} </li>
+                                        <li class="list-group-item">Apellido paterno: {{ $apellidop ?? '' }}</li>
+                                        <li class="list-group-item">Apellido materno: {{ $apellidom ?? '' }}</li>
+                                        <li class="list-group-item">Fecha de Nacimiento: {{ $fecha ?? '' }}</li>
+                                        <li class="list-group-item">Sexo: {{ $sexo ?? '' }}</li>
+                                        <li class="list-group-item">E-Mail UCTemuco: {{ $correo ?? '' }}</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                        <br>
                     </div>
+
                     <!-- Opciones generales del portal del estudiante primera seccion -->
                     <div class="col-md-3 order-md-first">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Inscripción de Cursos</h5>
+                                <a href="inscripcion" class="btn btn-primary">ir</a>
+                            </div>
+                        </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Solicitud Nota P</h5>
@@ -128,6 +140,7 @@
                                 <a href="notap" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Cuenta Corriente</h5>
@@ -135,6 +148,7 @@
                                 <a href="cuenta" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Información Académica</h5>
@@ -142,6 +156,7 @@
                                 <a href="informacionacademica" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Documentos</h5>
@@ -149,6 +164,7 @@
                                 <a href="documentos" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Certificado Academico</h5>
@@ -157,6 +173,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Opciones generales del portal del estudiante segunda seccion -->
                     <div class="col-md-3 order-md-last">
                         <div class="card">
@@ -166,6 +183,7 @@
                                 <a href="biblioteca" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Horas Asistente social</h5>
@@ -173,6 +191,7 @@
                                 <a href="asistente" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Notas Parciales</h5>
@@ -180,13 +199,15 @@
                                 <a href="notas" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Solicitudes Estudiantiles</h5>
-                                <p class="card-text">Renuncia, Suspensión y Reincoporporación.</p>
+                                <h5 class="card-title">Solicitudes Estudiantes</h5>
+                                <p class="card-text">Renuncia, Suspensión y Reincorporación.</p>
                                 <a href="solicitudes" class="btn btn-primary">ir</a>
                             </div>
                         </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Ob.Ficha Academica</h5>
@@ -212,7 +233,7 @@
 
 
         
-        <!-- Footer -->
+        <!-- Pie de página -->
         <footer class="bg-dark text-muted">           
             <div class="pt-5 pb-5 footer">
                 <div class="container">
@@ -333,7 +354,7 @@
             </div>
 
             <!-- Copyright -->
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <div class="text-center p-4">
                 © Portal del Estudiante es un proyecto realizado por la Dirección de Informática UCTemuco.
                 Soporte, comentarios, errores reportarlos al correo: soportesistemas@uct.cl.
             </div>

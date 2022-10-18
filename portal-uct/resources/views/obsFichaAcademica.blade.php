@@ -18,7 +18,7 @@
         <!-- Fondo del body de la paguina -->
         <style>
             body {
-                background-image: url("Fondo.png");
+                background-image: url("1077409.png");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover; 
@@ -92,8 +92,8 @@
             </div>
         </nav>
 
-        <!-- Funciones generales -->
-        <section>
+         <!-- Funciones generales -->
+         <section>
         <br>
         <br>
         <br>
@@ -101,19 +101,20 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <h1 class="text-warning" style = "text-align: center;">Observación a la Ficha Académica Acumulada</h1>
-                        <p>
+                        <p class="text-white">
                             En esta sección encontrarás el formulario para solicitar una modificación a tu historial académico, a través de ella puedes solicitar modificación de notas, incorporar notas y/o eliminar notas. Además podrás consultar el estado de tu solicitud.
                         </p>
-                        <h5>El período para realizar solicitudes de Observación a la Ficha ha finalizado.</h5>
+                        <h5 class="text-warning">El período para realizar solicitudes de Observación a la Ficha ha finalizado.</h5>
                     </div>
-                    <div class="accordion col-12 d-flex justify-content-center" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Resultados Obs.Ficha Académica
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+
+                    <div class="accordion d-flex justify-content-center" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <strong>Resultados Obs.Ficha Académica</strong>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     Seleccione una carrera para consultar el estado de su observación a la ficha académica acumulada.
                                     <br>

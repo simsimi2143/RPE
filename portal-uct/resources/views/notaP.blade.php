@@ -18,7 +18,7 @@
         <style>
             
             body {
-                background-image: url("{{ asset('images/1077409.png') }} ");
+                background-image: url("{{ asset('1077409.png') }} ");
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-size: cover;
