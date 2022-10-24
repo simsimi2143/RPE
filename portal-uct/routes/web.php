@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('menu', function () {
-    return view('inicio');
+    return view('menu');
 });
 
 Route::get('biblioteca', function () {
@@ -41,10 +41,6 @@ Route::get('recuperar', function () {
 
 Route::get('cambiar', function () {
     return view('cambiarC');
-});
-
-Route::get('informacion', function () {
-    return view('informacionP');
 });
 
 Route::get('informacionacademica', function () {

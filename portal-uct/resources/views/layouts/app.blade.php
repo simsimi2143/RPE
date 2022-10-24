@@ -1,76 +1,81 @@
 <!DOCTYPE html>
-<html lang = "{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Universidad Católica de Temuco</title>
-        <link rel="icon" href="{{ asset('iconoUCT.png') }}">
+        <title>@yield('titulo') - Universidad Católica de Temuco</title>
+        <link rel="icon" href="{{ asset('images/iconoUCT.png') }}">
         <link href='https://fonts.googleapis.com/css?family=Noto+Sans+SC' rel='stylesheet' type='text/css'>
         <script src="../js/sweetalert2.all.min.js"></script>
 
         <!-- Los iconos tipo Solid de Fontawesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
+        
         <style>
-            
-            body {
-                background-image: url("{{ asset('images/1077409.png') }} ");
-                background-attachment: fixed;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-            }
-
-            .title {
-                color: grey;
-                font-size: 18px;
-            }
-
-            button {
-                border: none;
-                outline: 0;
-                display: inline-block;
-                padding: 8px;
+            body.darkmode{
+                background-color: #1f1f1f;
                 color: white;
-                background-color: #212529;
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-                font-size: 18px;
             }
 
-            a {
+            .darkmode .navbar{
+                background-color: #1c1c1c;
+            }
+
+            .darkmode footer{
+                background-color: #1c1c1c;
+            }
+            
+            .darkmode article a{
+                background-color: #1c1c1c;
+                color: white;
+            }
+
+            .darkmode .nav-link {
+                color: lightgrey;
+            }
+
+            .darkmode .card {
+                background-color: darkslategray;
+                color: white;
+            }
+
+            .navbar{
+                background-color: gray;
+            }
+
+            footer{
+                background-color: #e9f1ec;
+            }
+
+            article a{
+                background-color: #e9f1ec;
+                color: black;
                 text-decoration: none;
-                font-size: 22px;
+            }
+
+            .nav-link{
                 color: black;
             }
 
-            button:hover, a:hover {
-                opacity: 0.7;
+            h3{
+                font-family: 'Noto Sans SC', sans-serif;
+                font-weight: bold;
             }
-
         </style>
-
     </head>
-
-    <!--Barra de Navegación-->
+    
+    
+    
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="https://www.uct.cl/" target="_blank" rel="noopener noreferrer">
-                    <img src="iconoUCT.png" alt="UCT" width="30" height="30">
+                    <img src="images/iconoUCT.png" alt="UCT" width="30" height="30">
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,101 +127,34 @@
                     </ul>
 
                     <div>
-                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-secondary mr-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> </a>
-                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
-                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>
-                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-flickr"></i></a>
+                        <button id="bdark" class="btn btn-outline-dark" onclick="modoOscuro()">Modo Oscuro</button>
+                        <a href="https://www.facebook.com/canaluctemuco?ref=hl" class="btn btn-outline-dark mr-2" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://twitter.com/UC_Temuco" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/uctemuco/?hl=es-la" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i> </a>
+                        <a href="https://www.youtube.com/user/canaluctemuco" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-youtube"></i> </a>
+                        <a href="https://www.flickr.com/photos/uc_temuco/sets/" class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-flickr"></i></a>
                     </div>
                 </div>
             </div>
         </nav>
-        
-        <!--Collapse Contenido-->
-        
-        <div class = "text-black m-5 justify-content-end">
-
-            <div class="card">
-                <img src = "{{ asset('images/profile_user.png') }}" alt = "John" style = "width:60%; margin: auto; padding: 30px;">
-                <h1>Nombre Alumno</h1>
-                    <p class = "title">Nombre Carrera</p>
-                <div>
-                    <p style = "display: inline;">Rut:</p>
-                    <p style = "display: inline;"><b>Rut Alumno</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Apellido Paterno:</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Apellido Materno:</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Nombres:</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Fecha de Nacimiento:</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Género:</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br>
-                <div style = "display: inline;">
-                    <p style = "display: inline;">Email Institucional</p>
-                    <p style = "display: inline;"><b>xd</b></p>
-                </div><br><br>
-
-                <h5 style = "display: inline;"><b>Actualizar Datos de Contacto</b></h5><br>
-
-                <h5 style = "display: inline;">Actualizar tu Email</h5>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div><br>
-
-                <h5 style = "display: inline;">Actualizar Numero de Celular Personal</h5>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">+9</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div><br>
-
-                <h5 style = "display: inline;">Actualizar Numero de Celular Alternativo</h5>
-                <p><small>Puede ser el de algún familiar o conocido de confianza</p></small>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">+9</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-
-                <div style = "width: 50%; margin: auto; margin-bottom: 30px;">
-                    <button type = "button" class = "btn btn-primary">Cambiar</button>
-                </div>
-
-                </div><br>
-                </div><br>
-                    <p><button>Regresar</button></p>
-                </div>
-            </div>
-        </div>
 
 
 
-        <iframe
-            class="fixed-bottom"
-            allow="microphone;"
-            width="250"
-            height="330"
-            src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
-        </iframe>
+        @yield('contenido')
 
 
-        
+
         <!-- Pie de página -->
-        <footer class="bg-dark text-muted">           
+        <footer class="text-muted">       
             <div class="pt-5 pb-5 footer">
                 <div class="container">
+                    <iframe
+                        class="fixed-bottom"
+                        allow="microphone;"
+                        width="250"
+                        height="330"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/b875564b-5f9c-4e8f-b29a-fb703dc50376">
+                        </iframe> 
                     <div class="row">       
                         <div class="col-sm-3">
                             <p class="footer-widget text-black-50">
@@ -340,5 +278,80 @@
             </div>
             <!-- Copyright -->
         </footer>
+
+
+
+        <script>
+            // Esta función evita colocar letras en el input del RUN
+            function validate(evt) {
+                var theEvent = evt || window.event;
+                if (theEvent.type === 'paste') {
+                    key = event.clipboardData.getData('text/plain');
+                } else {
+                    var key = theEvent.keyCode || theEvent.which;
+                    key = String.fromCharCode(key);
+                }
+                    
+                var regex = /[0-9]/;
+                    
+                if( !regex.test(key) ) {
+                    theEvent.returnValue = false;
+                    if(theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+
+
+            // Mediante esta función nos aseguramos que los números telefónicos ingresados en ambos campos asigandos a esta tarea
+            // sean iguales para así validar este dato 
+            function checkNum() {
+                var tel1 = document.getElementById("tel1").value;
+                var tel2 = document.getElementById("tel2").value;
+                var button = document.getElementById("buttonSub");
+                var error = document.getElementById("error");
+                    
+                // En nuestra condicional nos aseguramos que estos datos coincidan
+                if (tel1 != tel2){ 
+                    button.disabled = true;
+                    error.textContent = "Los números no coinciden.";
+                    error.style.color = "red";
+                }
+                    
+                // Dado que si no es el caso arroje un error debajo de la etiqueta label para que el usuario sea capaz de verla
+                else {
+                    button.disabled = false;
+                    error.textContent = '';
+                }
+            }
+
+
+            // Modo Oscuro
+            function modoOscuro(){
+                const bdark = document.querySelector('#bdark');
+                const body = document.querySelector('body');
+
+                load();
+
+                bdark.addEventListener('click', e =>{
+                    body.classList.toggle('darkmode');
+                    store(body.classList.contains('darkmode'));
+                });
+
+                // Ver si existe o no el valor del modo oscuro
+                function load(){
+                    const darkmode = localStorage.getItem('darkmode');
+
+                    if(!darkmode){
+                        store('false');
+                    } else if(darkmode == 'true'){
+                        body.classList.add('darkmode');
+                    }
+                }
+
+                // Guardar el valor
+                function store(value){
+                    localStorage.setItem('darkmode', value);
+                }
+            }
+        </script>
     </body>
 </html>
