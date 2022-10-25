@@ -93,7 +93,7 @@
         </nav>
         
     <!--Contenido-->
-
+        
         <div class = "text-black m-5 justify-content-end">
             <h2>Reserva Horas con Asistentes Sociales</h2><br>
             <a>
@@ -126,11 +126,12 @@
                 </div>
                 <br>
                 <div>
+                    <!-- Creating a dropdown menu with the options 1, 2, 3, and 4. --> 
                     <a >Seleccione alguna de las horas disponibles:</a>
                     <select class = "form-select text-center mt-3" aria-label = "Default select example">
                         <option selected>1</option>
                         <option value = "1">2</option>
-                        <option value = "2">3</option>
+                        <option value = "2">3</option> 
                         <option value = "3">4</option>
                     </select>
                 </div>
@@ -153,6 +154,7 @@
                             <p class="footer-widget text-black-50">
                                 <h4>CAMPUS SAN FRANCISCO</h4>
                                 <ul>
+                                 <!-- Creating a list item with a class of fa-solid fa-location-dot.-->
                                     <li>
                                         <i class="fa-solid fa-location-dot"></i> Manuel Montt 56
                                     </li>

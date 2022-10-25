@@ -61,6 +61,7 @@ class MenuController extends Controller {
             @visi_materno = ?, @visi_nombres = ?, @visi_email = ?, @visi_fono_per = ?, @sexo_codigo = ?, @sexo_nombre = ?, @visi_fecha_nac = ?, 
             @visi_cargo = ?, @visi_esquema_completo = ?, @visi_extra1 = ?, @visi_extra2 = ?, @visi_extra3 = ?, @usuario_mod = ?", [$n_rut, $n_dv, 
             $visi_paterno, $visi_materno, $visi_nombres, $visi_email, $visi_fono_per, $sexo_codigo, $sexo_nombre, $visi_fecha_nac, $visi_cargo,
+            /* It's a stored procedure. */
             $visi_esquema_completo, $visi_extra1, $visi_extra2, $visi_extra3, $usuario_mod]);
 
 

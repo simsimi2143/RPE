@@ -20,8 +20,10 @@ class LoginController extends Controller {
         }
         //Declaracion de varaibles a partir de la informacion de la sesion
         $n_rut = session('rut_nro');
+        /* It's a method to get the value of the input field named `dv_nro` */
         $n_dv  = session('dv_nro'); 
 
+        /* It's a method to get the value of the input field named `rut_nro` */
         $request->input('rut_nro');
 
         //Pregunta si existe la sesion, sino avanza
@@ -89,6 +91,7 @@ class LoginController extends Controller {
                     //retorna la vista y envia los datos necesarios de la vista confirma
                     return view('confirma',[
                         "n_rut" => $a_rut_nro,
+                        /* It's a method to get the value of the input field named `n_com` */
                         "n_com" => $nom_com,
                         "carg"  => $cargo
                     ]);
